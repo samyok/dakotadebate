@@ -93,6 +93,19 @@ export default function Home(opts: opts) {
                 <meta name="description"
                       content="A free debate camp for everyone. Preregister today to get an email as soon as registration is open!"/>
                 <link rel="icon" href="/favicon.ico"/>
+                <title>Brookings Debate Institute</title>
+                <meta name="title" content="Brookings Debate Institute"/>
+                <meta name="description" content="A free debate camp for everyone. Preregister today to get an email as soon as registration is open!"/>
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content="https://brookingsdebate.org/"/>
+                <meta property="og:title" content="Brookings Debate Institute"/>
+                <meta property="og:description" content="A free debate camp for everyone. Preregister today to get an email as soon as registration is open!"/>
+                <meta property="og:image" content="https://brookingsdebate.org/BDI_logo.png"/>
+                <meta property="twitter:card" content="summary_large_image"/>
+                <meta property="twitter:url" content="https://brookingsdebate.org/"/>
+                <meta property="twitter:title" content="Brookings Debate Institute"/>
+                <meta property="twitter:description" content="A free debate camp for everyone. Preregister today to get an email as soon as registration is open!"/>
+                <meta property="twitter:image" content="https://brookingsdebate.org/BDI_logo.png"/>
             </Head>
             <main className={styles.main}>
                 <div id="particles-js"/>
