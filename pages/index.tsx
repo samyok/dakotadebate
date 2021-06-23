@@ -104,7 +104,7 @@ export default function Home(opts: opts) {
                     <div className={styles.logo}>
                         <Image layout='responsive' src={wideLogo} alt='Wide logo for Brookings Debate Institute'/>
                     </div>
-                    <h1 className={styles.gap}>A free debate camp for all</h1>
+                    {/*<h1 className={styles.gap}>A free debate camp for all</h1>*/}
                     <p className={styles.gap}>Pre-register below to get notified as soon as registration opens!</p>
                     {success ?
                         <p className={styles.success}>Thanks for showing your interest in BDI! You&apos;ll get an email
