@@ -15,9 +15,6 @@ export default async (req: NextApiRequest, res: NextApiResponse<result>) => {
 
     const preregistrationForms = await db
         .collection("preregistration")
-        .insertOne(req.body/*, (err: any, rslt: any) => {
-            if (!err) res.json({success: true});
-            else res.json({success: false, data: err});
-        }*/)
+        .insertOne({...req.body, timestamp: (new Date())})
     res.json({success: true})
 };
