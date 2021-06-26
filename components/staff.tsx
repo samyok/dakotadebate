@@ -33,12 +33,12 @@ export default function OurStaff() {
         ));
     return (
         <div className={styles.container} id="people">
-            <BorderedH2>Our Staff</BorderedH2>
+            <BorderedH2>Our Team</BorderedH2>
             <div className="cardContainer">{staff}</div>
             {!showAll && (
                 <div className="center">
                     <a href="#staff" onClick={() => setShowAll(true)}>
-                        View all staff
+                        View everyone
                     </a>
                 </div>
             )}
