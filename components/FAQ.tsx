@@ -28,13 +28,13 @@ export default function FAQ() {
                 Debate.
             </Collapsible>
             <Collapsible q={"Why should I attend Dakota Debate over other camps?"}>
-                Summer debate camps often cost thousands of dollars. DDI is different. With a
-                <b>completely free</b> camp run by volunteers, DDI aims to empower <b>every</b> aspiring student.
+                Summer debate camps often cost thousands of dollars. DDI is different. With a <b>completely free</b> 
+                camp run by volunteers, DDI aims to empower <b>every</b> aspiring student.
                 Because our team is run entirely by current and former debaters, we bring
                 you the tactics relevant to the evolving South Dakota debate field.
             </Collapsible>
             <Collapsible q={"Who is teaching?"}>
-                Our amazing team includes a 2nd-place <b>finalist</b> at the 2021 <b>National Tournament</b>,{" "}
+                Our amazing team includes a 2nd-place <b>national finalist</b> at the 2021 National Tournament,{" "}
                 <b>six</b> South Dakota <b>state champions</b>, a <b>Tournament of Champions qualifier</b>,
                 and other experienced advisors who are the best that the South Dakota debate 
                 community has to offer.
