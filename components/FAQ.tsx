@@ -31,7 +31,7 @@ export default function FAQ() {
                 Summer debate camps often cost thousands of dollars. DDI is different. With a
                 COMPLETELY FREE camp run by volunteers, DDI aims to empower EVERY aspiring student.
                 Because our team is run entirely by debaters who have debated this year, we bring
-                you the tactics that are relevant to the evolving Sotuh Dakota debate field.
+                you the tactics that are relevant to the evolving South Dakota debate field.
             </Collapsible>
             <Collapsible q={"Who is teaching?"}>
                 Our amazing team includes a 2nd-place finalist at the 2021 National Tournament,{" "}
