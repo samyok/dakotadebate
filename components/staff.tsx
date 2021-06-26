@@ -32,7 +32,7 @@ export default function OurStaff() {
             </Card>
         ));
     return (
-        <div className={styles.container}>
+        <div className={styles.container} id="people">
             <BorderedH2>Our Staff</BorderedH2>
             <div className="cardContainer">{staff}</div>
             {!showAll && (

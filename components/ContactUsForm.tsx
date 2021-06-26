@@ -7,7 +7,7 @@ import { EnvelopeFill, Instagram, Twitter } from "react-bootstrap-icons";
 
 export default function ContactUsForm() {
     return (
-        <div className={"container"}>
+        <div className={"container"} id="contact">
             <BorderedH2 nomargin>Contact Us</BorderedH2>
             <div className="center">
                 <a href="https://twitter.com/dakotadebate">

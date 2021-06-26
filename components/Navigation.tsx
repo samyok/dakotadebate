@@ -50,21 +50,21 @@ export default function Navigation() {
                         <h2>Dakota Debate Institute</h2>
                     </div>
                     <div className={styles.menu}>
-                        <a className={styles.link} href="#info">
-                            Information
-                        </a>
                         <a className={styles.link} href="#people">
-                            People
+                            Our Staff
                         </a>
                         <a className={styles.link} href="#faq">
                             FAQ
                         </a>
+                        <a className={styles.link} href="#history">
+                            History
+                        </a>
                         <a className={styles.link} href="#contact">
                             Contact Us
                         </a>
-                        <a className={`${styles.link}`} href="/login">
-                            Login
-                        </a>
+                        {/*<a className={`${styles.link}`} href="/login">*/}
+                        {/*    Login*/}
+                        {/*</a>*/}
                     </div>
                 </div>
             </div>

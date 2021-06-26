@@ -9,7 +9,7 @@ export default function Information() {
     // let windowWidth =
     // let marginTop = typeof window !== "undefined" ? (window.innerWidth < 900 ? 50 : -150) : 50;
     return (
-        <div>
+        <div id="history">
             <BorderedH2>History</BorderedH2>
             <div className="container">
                 <div className="img">

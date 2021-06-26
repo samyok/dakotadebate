@@ -6,7 +6,7 @@ import Collapsible from "./Collapsible";
 
 export default function FAQ() {
     return (
-        <div className={"container"}>
+        <div className={"container"} id="faq">
             <BorderedH2>FAQ</BorderedH2>
             <Collapsible q={"When is the camp?"}>
                 The online camp is set to occur during the time frame of August 2nd through August
