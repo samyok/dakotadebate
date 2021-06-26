@@ -21,15 +21,12 @@ export default function Information() {
                         Last year, Aditya Tummala and Prasoon Kharel, in an effort to revive a dying
                         debate program at Brookings High School, began an online debate camp
                         (BHSODC) as a pilot for DDI. BHSODC was a resounding success, with the
-                        number of active debate members going from 5 members to over 20 members!
+                        number of active debate members growing from 5 members to over 20 members.
                         Motivated and enthusiastic from the success in Brookings, we at DDI banded
-                        together to expand the efforts and create a meaningful impact in not only
-                        individual teams, but revive the degrading relationships and connections the
-                        debate community has among each other. We want to spark an enthusiasm and
-                        excitement for debate, as we have realized and embraced the endless benefits
-                        of being a debater.
-                    </p>
-                    <p>That’s our goal for this camp.</p>
+                        together not only to expand those efforts and create a meaningful impact in
+                        individual teams, but to revive the degrading relationships and connections the
+                        debate community has among each other. We want to spark the same enthusiasm and
+                        excitement for debate we've experienced ourselves.
                 </div>
                 <style jsx>{`
                     .container {
