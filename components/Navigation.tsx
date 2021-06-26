@@ -8,7 +8,7 @@ import React, { useEffect, useState } from "react";
 import logo from "../public/bison_logo.png";
 
 const SCROLL_DISTANCE = 30;
-const TRANSITION_DURATION = "800ms";
+const TRANSITION_DURATION = "450ms";
 
 export default function Navigation() {
     let [scrollDistance, setScrollDistance] = useState(0);
