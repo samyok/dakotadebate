@@ -5,19 +5,11 @@
 const staffdata = [
     {
         name: "Prasoon Kharel",
-        image: "/people/prasoon.jpg",
-        bio: `Hey! I am brown and going to brown 😎.
-         I graduated from Brookings High School, where I did Policy for one year and Lincoln-Douglas for three.
-         Some of my major accomplishments include losing to Catherine every round since sophomore year and winning 7 ballots at nationals two times in a row.
-         Just thankful to be here!`,
-    },
-    {
-        name: "Aditya Tummala",
-        image: "/people/Aditya.jpg",
-        bio: `Hello!
-        I’m an incoming senior at Brookings High School and I compete in Public Forum debate and International Extemporaneous Speaking.
-        I am a 2-time National Qualifier, State Champion in Extemp, and national elimination round qualifier; and I’m very enthusiastic about inspiring others to love debate as much as I do!
-        Outside of debate, I love fishing with Elijah, playing soccer and tennis, cooking/eating, and hanging out with the others in the debate community!`,
+        image: "/people/Prasoon.jpeg",
+        bio: `Hi! I graduated from Brookings High School this year and will be attending Brown University in the fall. 
+        I competed in Lincoln Douglas for the majority of my highschool career, where I was a state finalist this year and a national qualifier for the past three years. 
+        Keeping debate going in South Dakota is very important to me, as this event completely shaped who I am as well as introduced me to some amazing people. 
+        I can’t wait to get to know all you future LD’ers!`,
     },
     {
         name: "Catherine Liu",
@@ -26,6 +18,14 @@ const staffdata = [
         I graduated from Sioux Falls Washington in 2021 and will be attending Harvard in the fall. 
         I competed in Lincoln-Douglas for four years, where I was a national runner-up, 2-time state champion, and 3-time national elimination round qualifier. 
         Debate gave me invaluable advocacy skills, so I’m excited to introduce new debaters to this amazing community!`,
+    },
+    {
+        name: "Aditya Tummala",
+        image: "/people/Aditya.jpg",
+        bio: `Hello!
+        I’m an incoming senior at Brookings High School and I compete in Public Forum debate and International Extemporaneous Speaking.
+        I am a 2-time National Qualifier, State Champion in Extemp, and national elimination round qualifier; and I’m very enthusiastic about inspiring others to love debate as much as I do!
+        Outside of debate, I love fishing with Elijah, playing soccer and tennis, cooking/eating, and hanging out with the others in the debate community!`,
     },
     {
         name: "Carter Demaray",
