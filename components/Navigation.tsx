@@ -51,7 +51,7 @@ export default function Navigation() {
                     </div>
                     <div className={styles.menu}>
                         <a className={styles.link} href="#people">
-                            Our Staff
+                            Our Team
                         </a>
                         <a className={styles.link} href="#faq">
                             FAQ
