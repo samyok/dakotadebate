@@ -1,0 +1,22 @@
+/*!
+ / Copyright (c) 2021 Samyok Nepal.
+ /
+@mixin gradient
+  background: linear-gradient(90.05deg, #7046EA 0%, #42B4CF 100%)
+
+.gradientBorder
+  @include gradient()
+  position: fixed
+  top: 0
+  left: 0
+  height: 100vh
+  width: 100vw
+  z-index: -100
+  .inside
+    background: white
+    width: calc(100vw - 10px)
+    height: calc(100vh - 10px)
+    position: fixed
+    top: 5px
+    left: 5px
+    z-index: -99

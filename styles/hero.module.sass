@@ -1,0 +1,187 @@
+/*!
+ / Copyright (c) 2021 Samyok Nepal.
+ /
+$blurple: #7A66E9
+$heroSize: max(90vh, 900px)
+@mixin gradient
+  background: linear-gradient(90.05deg, #7046EA 0%, #42B4CF 100%)
+
+@mixin not-fixed-in-small
+  @media screen and (max-width: 900px)
+    position: absolute
+
+
+@mixin noselect
+  -webkit-user-select: none
+  -webkit-touch-callout: none
+  -khtml-user-select: none
+  -ms-user-select: none
+  -moz-user-select: none
+  user-select: none
+
+.container
+  color: white
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  height: $heroSize
+  margin-top: -175px
+  @media screen and (max-width: 900px)
+    margin-top: -400px
+
+.background
+  height: $heroSize
+  z-index: -99
+  position: absolute
+  top: 0
+  left: 0
+  overflow: hidden
+
+  .textboxes
+    position: absolute
+    bottom: 100px
+    left: 50%
+    transform: translateX(-50%)
+
+.backgroundImage
+  height: 100%
+  width: 100%
+
+.particles
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+//background: linear-gradient(90deg, #7046EA 0%, #53A5B7 100%)
+
+.navigation
+  @include noselect
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  z-index: 100
+
+  width: 100vw
+
+  .logo
+    width: 100%
+    text-align: left
+    height: 300px
+    transition-duration: 500ms
+
+  .menu
+    font-size: 20px
+    color: white
+    margin: 0 0 0 50%
+    align-self: flex-start
+    transform: translateX(-50%)
+    white-space: nowrap
+    @media screen and (max-width: 850px)
+      margin-top: -80px
+
+
+    .link
+      margin: 5px
+      transition-duration: 500ms
+      padding: 5px 20px
+      border-radius: 5px
+      cursor: pointer
+
+      &:hover
+        background: rgba(255, 255, 255, 0.4)
+
+      &:not(.login)
+        @media screen and (max-width: 900px)
+          display: none
+
+      &.login
+        @media screen and (max-width: 900px)
+          font-size: 20px
+
+.gradientBackground
+  @include gradient()
+  position: fixed
+  @include not-fixed-in-small()
+  padding-bottom: 5px
+  top: 0
+  left: 0
+  z-index: 99
+.gradientBackgroundInactive
+  position: fixed
+  @include not-fixed-in-small()
+  padding-bottom: 5px
+  top: 0
+  left: 0
+  z-index: 99
+.compact
+  background: white
+  *
+    color: $blurple !important
+  .logoContainer
+    height: 20px
+
+  h2
+    font-size: min(6vw, 40px) !important
+    @media screen and (max-width: 900px)
+      white-space: break-spaces !important
+  .link
+    font-size: 20px
+    margin-bottom: 20px
+
+  .logo
+    height: 30px
+
+  .menu
+    font-size: 20px
+    margin: 20px 0 10px calc(5% + 142px)
+    transform: translateX(0)
+
+    @media screen and (max-width: 900px)
+      margin: 0px 0 30px calc(100% - 90px)
+      a.link
+        font-size: 15px !important
+.hero
+  text-align: center
+  display: flex
+  justify-content: center
+  align-items: center
+  width: min(90vw, 1100px)
+  flex-direction: column
+  flex-grow: 1
+  @media screen and (max-width: 900px)
+    padding-top: 300px
+
+  h1
+    font-size: max(min(4.5rem, 7vw), 50px)
+
+
+  .btn
+    margin-top: 2vh
+
+  a.button
+    display: block
+    @include noselect
+    padding: 30px 60px
+    background-color: white
+    border: 0
+    border-radius: 5px
+    font-size: 30px
+    font-weight: bold
+    color: $blurple
+    transition-duration: 250ms
+
+    &:hover, &:focus
+      opacity: 90%
+      transform: translateY(-5px)
+      cursor: pointer
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 5px
+
+    &:active
+      transition-duration: 100ms
+      opacity: 90%
+      cursor: pointer
+      transform: translateY(5px)
+      box-shadow: none
