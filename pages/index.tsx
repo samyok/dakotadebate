@@ -12,6 +12,11 @@ import ContactUs from "../components/ContactUsForm";
 type opts = {
     isConnected: boolean;
 };
+
+const description_meta =
+    "Summer debate camps often cost thousands of dollars. DDI is different. With a COMPLETELY FREE camp run by" +
+    " volunteers, DDI aims to empower EVERY aspiring student. Because our team is run entirely by debaters who" +
+    " have debated this year, we bring you the tactics that are relevant to the evolving Sotuh Dakota debate field.";
 export default function Home(opts: opts) {
     return (
         <div className={styles.container}>
@@ -31,18 +36,12 @@ export default function Home(opts: opts) {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://dakotadebate.org/" />
                 <meta property="og:title" content="Dakota Debate Institute" />
-                <meta
-                    property="og:description"
-                    content="A free debate camp for everyone. Register today while spots last!"
-                />
+                <meta property="og:description" content={description_meta} />
                 <meta property="og:image" content="https://dakotadebate.org/ddi-full.png" />
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content="https://dakotadebate.org/" />
                 <meta property="twitter:title" content="Dakota Debate Institute" />
-                <meta
-                    property="twitter:description"
-                    content="A free debate camp for everyone. Preregister today to get an email as soon as registration is open!"
-                />
+                <meta property="twitter:description" content={description_meta} />
                 <meta property="twitter:image" content="https://dakotadebate.org/ddi-full.png" />
             </Head>
             <main className={styles.main}>
