@@ -47,7 +47,7 @@ const staffdata = [
     },
     {
         name: "Srishti Kumari",
-        image: "/people/prasoon.jpg",
+        image: "/people/srishti.JPG",
         bio: `Hey! I graduated from Sioux Falls Roosevelt where I debated in Policy and Public Forum for two years each. 
         In Public Forum, I was a 2-time NSDA national qualifier and part of the first South Dakota team to participate in the Tournament of Champions, receiving 6 bids over two years. 
         I am an incoming freshman at Duke, where I plan to study neuroscience. 

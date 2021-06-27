@@ -10,7 +10,7 @@ export default function ContactUsForm() {
         <div className={"container"} id="contact">
             <BorderedH2 nomargin>Contact Us</BorderedH2>
             <div className="center">
-                <a href="https://twitter.com/dakotadebate">
+                <a href="https://twitter.com/debatedakota">
                     <Twitter size={70} color={"#4937b8"} />
                 </a>
                 <a href="mailto:staff@dakotadebate.org">
