@@ -15,6 +15,7 @@
     "formik": "^2.2.9",
     "formik-chakra-ui": "^1.4.7",
     "framer-motion": "^4.1.17",
+    "json2csv": "^5.0.6",
     "mongodb": "^3.6.9",
     "next": "11.0.1",
     "react": "17.0.2",
@@ -23,6 +24,7 @@
     "sass": "^1.35.1"
   },
   "devDependencies": {
+    "@types/json2csv": "^5.0.2",
     "@types/react": "17.0.11",
     "eslint": "7.29.0",
     "eslint-config-next": "11.0.1",
