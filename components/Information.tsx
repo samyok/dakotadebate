@@ -22,11 +22,10 @@ export default function Information() {
                         debate program at Brookings High School, began an online debate camp
                         (BHSODC) as a pilot for DDI. BHSODC was a resounding success, with the
                         number of active debate members growing from 5 members to over 20 members.
-                        Motivated and enthusiastic from the success in Brookings, we at DDI banded
-                        together not only to expand those efforts and create a meaningful impact in
-                        individual teams, but to revive the degrading relationships and connections
-                        the debate community has among each other. We want to spark the same
-                        enthusiasm and excitement for debate we&apos;ve experienced ourselves.
+                        Motivated and enthusiastic from the success in Brookings, we at DDI strive
+                        to not only expand upon these efforts, but also to revive the relationships
+                        and connections that make the debate community unique. We want to spark the
+                        same enthusiasm and excitement for debate we&apos;ve experienced ourselves.
                     </p>
                 </div>
                 <style jsx>{`
