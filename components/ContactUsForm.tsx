@@ -30,6 +30,13 @@ export default function ContactUsForm() {
                     position: relative;
                 }
 
+                @media screen and (max-width: 900px) {
+                    .container {
+                        padding-top: 20px;
+                        margin-top: 30px;
+                    }
+                }
+
                 .center {
                     margin-top: 40px;
                     display: flex;
