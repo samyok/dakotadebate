@@ -24,9 +24,9 @@ export default function Information() {
                         number of active debate members growing from 5 members to over 20 members.
                         Motivated and enthusiastic from the success in Brookings, we at DDI banded
                         together not only to expand those efforts and create a meaningful impact in
-                        individual teams, but to revive the degrading relationships and connections the
-                        debate community has among each other. We want to spark the same enthusiasm and
-                        excitement for debate we've experienced ourselves.
+                        individual teams, but to revive the degrading relationships and connections
+                        the debate community has among each other. We want to spark the same
+                        enthusiasm and excitement for debate we&apos;ve experienced ourselves.
                     </p>
                 </div>
                 <style jsx>{`
