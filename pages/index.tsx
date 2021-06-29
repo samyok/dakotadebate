@@ -16,23 +16,16 @@ type opts = {
 const description_meta =
     "Summer debate camps often cost thousands of dollars. DDI is different. With a COMPLETELY FREE camp run by" +
     " volunteers, DDI aims to empower EVERY aspiring student. Because our team is run entirely by debaters who" +
-    " have debated this year, we bring you the tactics that are relevant to the evolving Sotuh Dakota debate field.";
+    " have debated this year, we bring you the tactics that are relevant to the evolving South Dakota debate field.";
 export default function Home(opts: opts) {
     return (
         <div className={styles.container}>
             <Head>
                 <title>Dakota Debate Institute</title>
-                <meta
-                    name="description"
-                    content="A free debate camp for everyone. Register today while spots last!"
-                />
+                <meta name="description" content={description_meta} />
                 <link rel="icon" href="/favicon.ico" />
                 <title>Dakota Debate Institute</title>
                 <meta name="title" content="Dakota Debate Institute" />
-                <meta
-                    name="description"
-                    content="A free debate camp for everyone. Register today while spots last!"
-                />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://dakotadebate.org/" />
                 <meta property="og:title" content="Dakota Debate Institute" />
