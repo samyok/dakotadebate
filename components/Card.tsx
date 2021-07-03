@@ -23,7 +23,7 @@ export default function Card({ radius, image, children, title, width }: props) {
                 .card {
                     display: flex;
                     align-items: center;
-                    box-shadow: rgba(122, 102, 203, 0.4) 4px 4px 15px 5px;
+                    box-shadow: rgba(122, 102, 203, 0.4) 1px 2px 8px 1px;
                     border-radius: ${radius ?? "25px"};
                     padding: 25px;
                     max-width: ${width ?? "800px"};
@@ -35,7 +35,7 @@ export default function Card({ radius, image, children, title, width }: props) {
                     .card {
                         flex-wrap: wrap;
                         padding: 20px 0px;
-                        margin: 20px 0;
+                        margin: 20px 10px;
                     }
                 }
 

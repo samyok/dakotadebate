@@ -13,8 +13,10 @@ export default function OurStaff() {
     const [showAll, setShowAll] = useState(false);
     const staff = staffdata
         .filter((_, i) => (showAll ? true : i < 4))
-        .map(p => (
+        .map((p, pIndex) => (
             <Card
+                // @ts-ignore
+                id={`person${pIndex}`}
                 key={JSON.stringify(p)}
                 title={p.name}
                 image={
@@ -37,7 +39,7 @@ export default function OurStaff() {
             <div className="cardContainer">{staff}</div>
             {!showAll && (
                 <div className="center">
-                    <a href="#staff" onClick={() => setShowAll(true)}>
+                    <a href="#person2" onClick={() => setShowAll(true)}>
                         View everyone
                     </a>
                 </div>
