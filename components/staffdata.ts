@@ -59,7 +59,30 @@ const staffdata = [
         bio: `Hey y'all! I participated in debate all 4 years of highschool and graduated from SF Washington in 2021. 
         I'm a 3-time national qualifier and a state runner up in a public forum. 
         This fall I am attending Eastern Connecticut University on a full ride where I will plan to study political science and philosophy with a concentration in international relations. 
-        Debate helped me find  my passion in life and gave me the skills/ confidence to pursue it. I'm very excited to help teach others some of the things I learned along the way!`,
+        Debate helped me find  my passion in life and gave me the skills/ confidence to pursue it. 
+        I'm very excited to help teach others some of the things I learned along the way!`,
+    },
+    {
+        name: "Lyla Mattu",
+        image: "/people/lyla.JPG",
+        bio: `Hi! I graduated from O’Gorman and am attending the University of Minnesota in the fall. 
+        Like Walker, I’m a 2-time state semifinalist in Lincoln-Douglas and a 2-time finalist in International Extemp. 
+        Junior year, I was the IX state champion. I’m also a 4-time national qualifier. 
+        I can’t wait to see where the South Dakota debate community goes! `,
+    },
+    {
+        name: "Walker Haber",
+        image: "/people/walker.png",
+        bio: `Howdy! I graduated from O’Gorman this year and will be attending the University of Kansas Honors in the fall. 
+        Like Lyla, I’m a 2-time state semifinalist in Lincoln-Douglas and a 2-time finalist in International Extemp. 
+        At the national tournament, I broke to elimination rounds junior year and was a top 60 speaker senior year. I’m excited to help debaters succeed!`,
+    },
+    {
+        name: "Samyok Nepal",
+        image: "/people/samyok.png",
+        bio: `Hello! I graduated from Brookings High School this year and will be attending the University of Minnesota after a gap year. 
+        I do all the coding for this site, the discord, and various other things.
+        I'm so excited to see what everyone learns this year!`,
     },
     {
         name: "Elijah Manzer",

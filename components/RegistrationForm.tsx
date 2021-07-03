@@ -17,8 +17,8 @@ export default function RegistrationForm({ onDone }: params) {
     const [loading, setLoading] = useState(false);
     let lastPage = page === pages.length - 1;
     return (
-        <div>
-            <h3>{pages[page].title}</h3>;
+        <div className={"mainContent"}>
+            <h3>{pages[page].title}</h3>
             <Formik
                 initialValues={initialValues}
                 onSubmit={(
@@ -54,15 +54,20 @@ export default function RegistrationForm({ onDone }: params) {
                             });
                     }
                 }}>
-                <Form>
+                <Form
+                    style={{
+                        display: "flex",
+                        justifyContent: "center",
+                    }}>
                     <Box
                         borderWidth="1px"
                         rounded="lg"
                         shadow="1px 1px 3px rgba(0,0,0,0.3)"
                         maxWidth={800}
+                        flexGrow={1}
                         background={"white"}
                         p={6}
-                        m="10px auto">
+                        m="10px 10px">
                         <Stack spacing={7}>
                             {pages[page].data.map(question => (
                                 <InputControl
@@ -85,6 +90,11 @@ export default function RegistrationForm({ onDone }: params) {
                 </Form>
             </Formik>
             <style jsx>{`
+                .mainContent {
+                    margin: 5px;
+                    background-color: white;
+                }
+
                 h3 {
                     text-align: center;
                     font-family: "Inter", sans-serif;
