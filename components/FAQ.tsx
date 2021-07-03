@@ -13,6 +13,12 @@ export default function FAQ() {
                 will be held on weekdays, with a camp tournament on the last day. Our team will be
                 online helping prepare evidence, cases, and rebuttals as needed over the weekend.
             </Collapsible>
+            <Collapsible q={"What time the camp?"}>
+                The main lessons and workshops will be from 1-4:30 Central Time on Monday through
+                Friday, with optional fun activities and seminars throughout the evening. Through
+                the weekend, our team will be available for case help for the tournament on Monday,
+                August 9.
+            </Collapsible>
             <Collapsible q={"Should I join even if I have no debate experience?"}>
                 <b>YES!</b> This camp is meant to be an introductory and intermediate camp, so we
                 expect a large group of students to have never touched debate before. We will split
