@@ -4,6 +4,8 @@
 
 import { connectToDatabase } from "../../utils/mongodb";
 import type { NextApiRequest, NextApiResponse } from "next";
+import { nanoid } from "nanoid";
+
 type result = {
     success: Boolean;
     data?: any;
@@ -15,6 +17,6 @@ export default async (req: NextApiRequest, res: NextApiResponse<result>) => {
 
     const registrationForms = await db
         .collection("partials")
-        .insertOne({ ...req.body, timestamp: new Date() });
+        .insertOne({ ...req.body, nanoid: nanoid(7), timestamp: new Date() });
     res.json({ success: true });
 };

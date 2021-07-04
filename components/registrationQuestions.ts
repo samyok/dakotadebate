@@ -128,6 +128,7 @@ interface questionTypes {
     studentDebateExperience: string;
     studentPartner: string;
     studentHear: string;
+    nanoid: string;
 }
 
 const initialValues = {
