@@ -3,21 +3,24 @@
  */
 
 import BorderedH2 from "./BorderedH2";
-import { EnvelopeFill, Instagram, Twitter } from "react-bootstrap-icons";
+import { EnvelopeFill, Instagram, Twitter, Facebook } from "react-bootstrap-icons";
 
 export default function ContactUsForm() {
     return (
         <div className={"container"} id="contact">
             <BorderedH2 nomargin>Contact Us</BorderedH2>
             <div className="center">
-                <a href="https://twitter.com/debatedakota">
-                    <Twitter size={70} color={"#4937b8"} />
-                </a>
                 <a href="mailto:staff@dakotadebate.org">
                     <EnvelopeFill size={70} color={"#4937b8"} />
                 </a>
                 <a href="https://instagram.com/dakotadebate">
                     <Instagram size={70} color={"#4937b8"} />
+                </a>
+                <a href="https://twitter.com/debatedakota">
+                    <Twitter size={70} color={"#4937b8"} />
+                </a>
+                <a href="https://facebook.com/dakotadebate">
+                    <Facebook size={70} color={"#4937b8"} />
                 </a>
             </div>
             <div className="footer">Copyright &copy; Dakota Debate Institute 2021</div>
