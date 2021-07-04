@@ -3,6 +3,8 @@
  */
 import * as ejs from "ejs";
 import transporter from "./nodemailTransport";
+import { send } from "./plivoTransport";
+import phone from "phone";
 
 const registration_confirmation = `<html lang="en">
 
@@ -35,16 +37,28 @@ const registration_confirmation = `<html lang="en">
 </html>
 `;
 
-export default async function Registration(name: string, email: string | string[]) {
+const smsMessage = `
+
+Thanks for signing up to DDI! This is our automated text-blast system where you will get important updates and messages as camp gets closer.
+
+(text STOP to stop)
+`.trim();
+
+export default async function Registration(
+    name: string,
+    email: string | string[],
+    phoneNumber: string,
+) {
     console.log(email);
-    let rendered = ejs.render(registration_confirmation, { name });
-    let info = await transporter.sendMail({
+    let rendered = ejs.render(registration_confirmation, { name: name.trim() });
+    let emailInfo = await transporter.sendMail({
         from: '"Dakota Debate Institute Staff" <staff@dakotadebate.org>', // sender address
         to: email, // list of receivers
         subject: "Registration confirmation for " + name, // Subject line
         text: "Thanks for registering!", // plain text body
         html: rendered, // html body
     });
-    console.log(info);
-    return info;
+    let smsInfo = await send(phone(phoneNumber)[0], smsMessage);
+    console.log({ emailInfo, smsInfo });
+    return { emailInfo, smsInfo };
 }

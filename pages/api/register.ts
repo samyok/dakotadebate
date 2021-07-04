@@ -13,10 +13,11 @@ export default async (req: NextApiRequest, res: NextApiResponse<result>) => {
 
     try {
         await db.collection("registration").insertOne({ ...req.body, timestamp: new Date() });
-        const emailInfo = await Registration(req.body.studentFirstName, [
-            req.body.studentEmail,
-            req.body.parentEmail,
-        ]);
+        const emailInfo = await Registration(
+            req.body.studentFirstName,
+            [req.body.studentEmail, req.body.parentEmail],
+            req.body.studentPhoneNumber,
+        );
         res.json({ success: true, data: emailInfo });
     } catch (e) {
         res.json({ success: false });
