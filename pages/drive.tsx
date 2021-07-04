@@ -11,7 +11,7 @@ export default function Drive() {
     return (
         <div>
             <a href="https://drive.google.com/drive/folders/14yxhdLkgHFYCkgZxTrbHD78zuSaGDV5O">
-                Click here if you're not rejected
+                Click here if you&apos;re not rejected
             </a>
         </div>
     );
