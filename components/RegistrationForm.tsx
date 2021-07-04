@@ -10,7 +10,7 @@ import { InputControl } from "formik-chakra-ui";
 
 interface params {
     onDone: Function;
-    data: questionTypes;
+    data: questionTypes | null;
 }
 
 export default function RegistrationForm({ onDone, data }: params) {
@@ -21,6 +21,7 @@ export default function RegistrationForm({ onDone, data }: params) {
         <div className={"mainContent"}>
             <h3>{pages[page].title}</h3>
             <Formik
+                // @ts-ignore
                 initialValues={{ ...initialValues, ...data }}
                 onSubmit={(
                     values: questionTypes,

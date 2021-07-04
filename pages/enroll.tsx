@@ -64,6 +64,7 @@ export default function Home(opts: opts) {
 
                     {!done && (
                         <RegistrationForm
+                            data={{}}
                             onDone={() => {
                                 setDone(true);
                             }}
