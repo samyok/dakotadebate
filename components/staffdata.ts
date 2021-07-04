@@ -82,6 +82,7 @@ const staffdata = [
         image: "/people/samyok.png",
         bio: `Hello! I graduated from Brookings High School this year and will be attending the University of Minnesota after a gap year. 
         I do all the coding for this site, the discord, and various other things.
+        As for Debate, I qualified to the National Tournament my sophomore year and helped with the Brookings High School Online Debate Camp last year. 
         I'm so excited to see what everyone learns this year!`,
     },
     {

@@ -1,5 +1,7 @@
 import { connectToDatabase } from "../../utils/mongodb";
 import type { NextApiRequest, NextApiResponse } from "next";
+import Registration from "../../templates/registration";
+
 type result = {
     success: Boolean;
     data?: any;
@@ -9,8 +11,14 @@ export default async (req: NextApiRequest, res: NextApiResponse<result>) => {
     const { db } = await connectToDatabase();
     console.log(req.body);
 
-    const registrationForms = await db
-        .collection("registration")
-        .insertOne({ ...req.body, timestamp: new Date() });
-    res.json({ success: true });
+    try {
+        await db.collection("registration").insertOne({ ...req.body, timestamp: new Date() });
+        const emailInfo = await Registration(req.body.studentFirstName, [
+            req.body.studentEmail,
+            req.body.parentEmail,
+        ]);
+        res.json({ success: true, data: emailInfo });
+    } catch (e) {
+        res.json({ success: false });
+    }
 };
