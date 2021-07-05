@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/**": {
+    "pages/api/**": {
       "excludeFiles": "**/*.{jpg,HEIC,png,JPG,jpeg}"
     }
   }
