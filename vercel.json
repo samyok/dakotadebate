@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/**": {
+      "excludeFiles": "**/*.{jpg,HEIC,png,JPG,jpeg}"
+    }
+  }
+}
