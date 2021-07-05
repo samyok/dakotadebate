@@ -1,11 +1,23 @@
 /*
  * Copyright (c) 2021 Samyok Nepal.
  */
+import prasoon from "../public/people/prasoon.jpg";
+import catherine from "../public/people/catherine 2.png";
+import aditya from "../public/people/Aditya.jpg";
+import carter from "../public/people/Carter Pic.jpg";
+import elijah from "../public/people/Elijah.jpeg";
+import lauren from "../public/people/Lauren.jpg";
+import srishti from "../public/people/srishti.jpg";
+import katherine from "../public/people/katherine.jpg";
+import lyla from "../public/people/lyla.jpg";
+import walker from "../public/people/walker.png";
+import samyok from "../public/people/samyok.png";
+import sam from "../public/people/Sam.jpg";
 
 const staffdata = [
     {
         name: "Prasoon Kharel",
-        image: "/people/Prasoon.jpeg",
+        image: prasoon,
         bio: `Hi! I graduated from Brookings High School this year and will be attending Brown University in the fall. 
         I competed in Lincoln Douglas for the majority of my highschool career, where I was a state finalist this year and a national qualifier for the past three years. 
         Keeping debate going in South Dakota is very important to me, as this event completely shaped who I am as well as introduced me to some amazing people. 
@@ -13,7 +25,7 @@ const staffdata = [
     },
     {
         name: "Catherine Liu",
-        image: "/people/catherine 2.png",
+        image: catherine,
         bio: `Hi!
         I graduated from Sioux Falls Washington in 2021 and will be attending Harvard in the fall. 
         I competed in Lincoln-Douglas for four years, where I was a national runner-up, 2-time state champion, and 3-time national elimination round qualifier. 
@@ -21,7 +33,7 @@ const staffdata = [
     },
     {
         name: "Aditya Tummala",
-        image: "/people/Aditya.jpg",
+        image: aditya,
         bio: `Hello!
         I’m an incoming senior at Brookings High School and I compete in Public Forum debate and International Extemporaneous Speaking.
         I am a 2-time National Qualifier, State Champion in Extemp, and national elimination round qualifier; and I’m very enthusiastic about inspiring others to love debate as much as I do!
@@ -29,7 +41,7 @@ const staffdata = [
     },
     {
         name: "Carter Demaray",
-        image: "/people/Carter Pic.jpg",
+        image: carter,
         bio: `Hey everyone! 
         I graduated from Yankton HS this year and will be attending Harvard in the fall. 
         I competed in public forum for four years, where I was a state champion (with Lauren!) and a two-time national qualifier (+ once in DX), and a national elimination round qualifier. 
@@ -38,7 +50,7 @@ const staffdata = [
     },
     {
         name: "Lauren Gillis",
-        image: "/people/Lauren.JPG",
+        image: lauren,
         bio: `Hola folks! 
         I just graduated from Yankton where I competed in Public Forum for all four years. 
         I’ve qualified twice for the NSDA national tournament (+ once in Extemp) with my partner, Carter, and we were the 2021 State Champs. 
@@ -47,7 +59,7 @@ const staffdata = [
     },
     {
         name: "Srishti Kumari",
-        image: "/people/srishti.JPG",
+        image: srishti,
         bio: `Hey! I graduated from Sioux Falls Roosevelt where I debated in Policy and Public Forum for two years each. 
         In Public Forum, I was a 2-time NSDA national qualifier and part of the first South Dakota team to participate in the Tournament of Champions, receiving 6 bids over two years. 
         I am an incoming freshman at Duke, where I plan to study neuroscience. 
@@ -55,7 +67,7 @@ const staffdata = [
     },
     {
         name: "Katherine Escalante",
-        image: "/people/katherine.JPG",
+        image: katherine,
         bio: `Hey y'all! I participated in debate all 4 years of highschool and graduated from SF Washington in 2021. 
         I'm a 3-time national qualifier and a state runner up in a public forum. 
         This fall I am attending Eastern Connecticut University on a full ride where I will plan to study political science and philosophy with a concentration in international relations. 
@@ -64,7 +76,7 @@ const staffdata = [
     },
     {
         name: "Lyla Mattu",
-        image: "/people/lyla.JPG",
+        image: lyla,
         bio: `Hi! I graduated from O’Gorman and am attending the University of Minnesota in the fall. 
         Like Walker, I’m a 2-time state semifinalist in Lincoln-Douglas and a 2-time finalist in International Extemp. 
         Junior year, I was the IX state champion. I’m also a 4-time national qualifier. 
@@ -72,14 +84,14 @@ const staffdata = [
     },
     {
         name: "Walker Haber",
-        image: "/people/walker.png",
+        image: walker,
         bio: `Howdy! I graduated from O’Gorman this year and will be attending the University of Kansas Honors in the fall. 
         Like Lyla, I’m a 2-time state semifinalist in Lincoln-Douglas and a 2-time finalist in International Extemp. 
         At the national tournament, I broke to elimination rounds junior year and was a top 60 speaker senior year. I’m excited to help debaters succeed!`,
     },
     {
         name: "Samyok Nepal",
-        image: "/people/samyok.png",
+        image: samyok,
         bio: `Hello! I graduated from Brookings High School this year and will be attending the University of Minnesota after a gap year. 
         I do all the coding for this site, the discord, and various other things.
         As for Debate, I qualified to the National Tournament my sophomore year and helped with the Brookings High School Online Debate Camp last year. 
@@ -87,7 +99,7 @@ const staffdata = [
     },
     {
         name: "Elijah Manzer",
-        image: "/people/Elijah.jpeg",
+        image: elijah,
         bio: `Hello friends! 
         I am going to be a senior at Brookings High School next year. 
         I have competed in debate for two years. I usually do Public Forum debate and Domestic Extemp. 
@@ -96,7 +108,7 @@ const staffdata = [
     },
     {
         name: "Sam Markley",
-        image: "/people/Sam.jpg",
+        image: sam,
         bio: `Hey everyone!
         I'm going into my senior year at Washington High School in Sioux Falls. I've competed in Lincoln Douglas since I started debate and broke to elimination rounds this year at nationals. 
         Debate has helped me find my voice and become more confident as a speaker, all while being a ton of fun! I can't wait to introduce debaters to this amazing activity and community!`,

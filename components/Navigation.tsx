@@ -45,7 +45,7 @@ export default function Navigation() {
                     }`}>
                     <div className={styles.logo}>
                         <div className={"logoContainer"}>
-                            <Image layout={"responsive"} src={logo} />
+                            <Image layout={"responsive"} src={logo} priority={true} alt={"logo"} />
                         </div>
                         <h2>Dakota Debate Institute</h2>
                     </div>

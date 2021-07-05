@@ -25,6 +25,7 @@ export default function OurStaff() {
                         width={300}
                         height={300}
                         alt={p.name}
+                        placeholder={"blur"}
                         objectFit={"cover"}
                     />
                 }>
