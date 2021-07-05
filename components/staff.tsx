@@ -26,6 +26,10 @@ export default function OurStaff() {
                         height={300}
                         alt={p.name}
                         objectFit={"cover"}
+                        placeholder={"blur"}
+                        blurDataURL={
+                            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNM4L9QDwAD1gHAp5YglgAAAABJRU5ErkJggg=="
+                        }
                     />
                 }>
                 {p.bio.split("\n").map(a => (
