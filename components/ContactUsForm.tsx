@@ -44,6 +44,7 @@ export default function ContactUsForm() {
                     margin-top: 40px;
                     display: flex;
                     justify-content: center;
+                    flex-wrap: wrap;
                 }
 
                 a {
