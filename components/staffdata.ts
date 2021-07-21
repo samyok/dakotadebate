@@ -78,6 +78,13 @@ const staffdata = [
         At the national tournament, I broke to elimination rounds junior year and was a top 60 speaker senior year. I’m excited to help debaters succeed!`,
     },
     {
+        name: "Joshua Park",
+        image: "/people/Joshua.jpeg",
+        bio: `Hey guys! I’m an incoming senior at Brookings High School, and have been involved in debate for 2 years. 
+        This year I competed in Domestic Extemp and was a state finalist and a NSDA national qualifier. 
+        My involvement in speech and debate has yielded rewarding skills that have assisted me immensely in striving for success, and I hope I’m able to help provide the same for all of you!`,
+    },
+    {
         name: "Samyok Nepal",
         image: "/people/samyok.png",
         bio: `Hello! I graduated from Brookings High School this year and will be attending the University of Minnesota after a gap year. 
