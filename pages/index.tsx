@@ -9,9 +9,7 @@ import Navigation from "../components/Navigation";
 import FAQ from "../components/FAQ";
 import ContactUs from "../components/ContactUsForm";
 
-type opts = {
-    isConnected: boolean;
-};
+type opts = {};
 
 const description_meta =
     "Summer debate camps often cost thousands of dollars. DDI is different. With a COMPLETELY FREE camp run by" +
@@ -51,14 +49,4 @@ export default function Home(opts: opts) {
             {/*</footer>*/}
         </div>
     );
-}
-
-export async function getServerSideProps() {
-    const { client } = await connectToDatabase();
-
-    const isConnected = await client.isConnected();
-
-    return {
-        props: { isConnected },
-    };
 }
