@@ -13,7 +13,7 @@ export default function FAQ() {
                 will be held on weekdays, with a camp tournament on the last day. Our team will be
                 online helping prepare evidence, cases, and rebuttals as needed over the weekend.
             </Collapsible>
-            <Collapsible q={"What time the camp?"}>
+            <Collapsible q={"What time is the camp?"}>
                 The main lessons and workshops will be from 1-4:30 Central Time on Monday through
                 Friday, with optional fun activities and seminars throughout the evening. Through
                 the weekend, our team will be available for case help for the tournament on Monday,
