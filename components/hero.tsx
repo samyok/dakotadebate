@@ -71,11 +71,18 @@ export default function Hero() {
             </div>
             <div className={styles.hero}>
                 <h1>South Dakota’s free, online debate institute for everyone.</h1>
+                {/*<div className={styles.btn}>*/}
+                {/*    <Link href={"/enroll"}>*/}
+                {/*        <a className={styles.button}>Register now!</a>*/}
+                {/*    </Link>*/}
+                {/*    <p>August 2-9, 2021</p>*/}
+                {/*</div>*/}
                 <div className={styles.btn}>
-                    <Link href={"/enroll"}>
-                        <a className={styles.button}>Register now!</a>
-                    </Link>
-                    <p>August 2-9, 2021</p>
+                    {/*<Link href={"/enroll"}>*/}
+                    {/*    <a className={styles.button}></a>*/}
+                    {/*</Link>*/}
+                    <p>Registration closed for 2021</p>
+                    <p>2022 registration will open this winter!</p>
                 </div>
             </div>
         </div>

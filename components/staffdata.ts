@@ -54,6 +54,15 @@ const staffdata = [
         I already miss the debate world, so I’m excited to share my passion with new debaters!`,
     },
     {
+        name: "Riley Nold",
+        image: "/people/Riley.jpeg",
+        bio: `Hey y’all! I graduated from WHS in 2021 and I’ll be attending the University Alabama in the fall. 
+        I debated Policy for three years and won a state championship. 
+        My senior year I transitioned to Public Forum where my partner Katherine and I qualified for the national tournament and were state finalists. 
+        Debate has provided me with valuable research and speaking skills, as well as a group of lifelong friends. 
+        I’m excited to help students grow into great speakers and to make the debate space their own.`
+    },
+    {
         name: "Katherine Escalante",
         image: "/people/katherine.JPG",
         bio: `Hey y'all! I participated in debate all 4 years of highschool and graduated from SF Washington in 2021. 
@@ -61,6 +70,14 @@ const staffdata = [
         This fall I am attending Eastern Connecticut University on a full ride where I will plan to study political science and philosophy with a concentration in international relations. 
         Debate helped me find  my passion in life and gave me the skills/ confidence to pursue it. 
         I'm very excited to help teach others some of the things I learned along the way!`,
+    },
+    {
+        name: "Samyok Nepal",
+        image: "/people/samyok.png",
+        bio: `Hello! I graduated from Brookings High School this year and will be attending the University of Minnesota after a gap year. 
+        I do all the coding for this site, the discord, and various other things.
+        As for Debate, I qualified to the National Tournament my sophomore year and helped with the Brookings High School Online Debate Camp last year. 
+        I'm so excited to see what everyone learns this year!`,
     },
     {
         name: "Lyla Mattu",
@@ -83,14 +100,6 @@ const staffdata = [
         bio: `Hey guys! I’m an incoming senior at Brookings High School, and have been involved in debate for 2 years. 
         This year I competed in Domestic Extemp and was a state finalist and a NSDA national qualifier. 
         My involvement in speech and debate has yielded rewarding skills that have assisted me immensely in striving for success, and I hope I’m able to help provide the same for all of you!`,
-    },
-    {
-        name: "Samyok Nepal",
-        image: "/people/samyok.png",
-        bio: `Hello! I graduated from Brookings High School this year and will be attending the University of Minnesota after a gap year. 
-        I do all the coding for this site, the discord, and various other things.
-        As for Debate, I qualified to the National Tournament my sophomore year and helped with the Brookings High School Online Debate Camp last year. 
-        I'm so excited to see what everyone learns this year!`,
     },
     {
         name: "Elijah Manzer",
