@@ -11,7 +11,7 @@ export default function FAQ() {
             <Collapsible q={"When is the camp?"}>
                 Both the online and in-person camps will take place from <b>June 25nd to June 30th, 2021.</b> Classes
                 will be held for most of each day, with a camp tournament on the last day. Our team will be
-                both online and in-perosn helping prepare evidence, cases, and rebuttals.
+                both online and in-person helping prepare evidence, cases, and rebuttals.
             </Collapsible>
             <Collapsible q={"Where is the camp?"}>
                 In-person camp will be held at South Dakota State University.
