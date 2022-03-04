@@ -4,7 +4,7 @@
 
 import { useRouter } from "next/router";
 import { NextPageContext } from "next";
-import { connectToDatabase } from "../../utils/mongodb";
+import clientPromise from "../../utils/mongodb";
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/Enroll.module.sass";
 import Head from "next/head";
@@ -123,7 +123,8 @@ export default function Post({ data }: props) {
 export async function getServerSideProps(context: NextPageContext) {
     // @ts-ignore
     const { id } = context.params;
-    const { db } = await connectToDatabase();
+    const client = await clientPromise;
+    const db = client.db("ddi");
     let data: any = await db.collection("partials").findOne({ nanoid: id });
     if (!data) {
         return {

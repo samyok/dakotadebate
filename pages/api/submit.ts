@@ -1,4 +1,4 @@
-import {connectToDatabase} from "../../utils/mongodb";
+import clientPromise from "../../utils/mongodb";
 import type {NextApiRequest, NextApiResponse} from 'next'
 type result = {
     success: Boolean
@@ -6,7 +6,8 @@ type result = {
     msg?: string
 }
 export default async (req: NextApiRequest, res: NextApiResponse<result>) => {
-    const {db} = await connectToDatabase();
+    const client = await clientPromise;
+    const db = client.db("ddi");
     console.log(req.body);
     if(!req.body.name) return res.json({success: false, msg: "Please enter your name"});
     if(!req.body.phone) return res.json({success: false, msg: "Please enter a phone number"});

@@ -18,7 +18,7 @@ let transporter = nodemailer.createTransport({
 const plivo = require("plivo");
 const client = new plivo.Client(process.env.PLIVO_ID, process.env.PLIVO_TOKEN);
 const { nanoid } = require("nanoid");
-const { connectToDatabase } = require("../utils/mongodb_require");
+const clientPromise = require("../utils/mongodb");
 const registration_confirmation = `
 <html lang="en">
 
@@ -76,7 +76,9 @@ https://dakotadebate.org/e/${link}
 }
 
 (async () => {
-    const { db } = await connectToDatabase();
+    const client = await clientPromise;
+    const db = client.db("ddi");
+
     const cursor = await db.collection("partials").find({});
     // make sure email is used only once
     let emails = new Set();

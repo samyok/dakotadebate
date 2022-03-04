@@ -3,10 +3,11 @@
  */
 require("dotenv").config({ path: "../.env.local" });
 const { nanoid } = require("nanoid");
-const { connectToDatabase } = require("../utils/mongodb_require");
+const clientPromise = require("../utils/mongodb");
 
 (async () => {
-    const { db } = await connectToDatabase();
+    const client = await clientPromise;
+    const db = client.db("ddi");
     // console.log(db);
     const cursor = await db.collection("partials").find({});
     const partialArr = [];

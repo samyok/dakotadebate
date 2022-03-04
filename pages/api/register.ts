@@ -1,4 +1,4 @@
-import { connectToDatabase } from "../../utils/mongodb";
+import clientPromise from '../../utils/mongodb'
 import type { NextApiRequest, NextApiResponse } from "next";
 import Registration from "../../templates/registration";
 
@@ -8,7 +8,8 @@ type result = {
     msg?: string;
 };
 export default async (req: NextApiRequest, res: NextApiResponse<result>) => {
-    const { db } = await connectToDatabase();
+    const client = await clientPromise;
+    const db = client.db("ddi");
     console.log(req.body);
 
     try {
