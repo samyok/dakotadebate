@@ -2,7 +2,8 @@
  * Copyright (c) 2021 Samyok Nepal.
  */
 
-import { connectToDatabase } from "../../utils/mongodb";
+// @ts-ignore
+import clientPromise from '../../utils/mongodb'
 import type { NextApiRequest, NextApiResponse } from "next";
 import { nanoid } from "nanoid";
 
@@ -12,7 +13,9 @@ type result = {
     msg?: string;
 };
 export default async (req: NextApiRequest, res: NextApiResponse<result>) => {
-    const { db } = await connectToDatabase();
+    // @ts-ignore
+    const client = await clientPromise
+    const db = client.db("ddi");
     console.log(req.body);
 
     const registrationForms = await db

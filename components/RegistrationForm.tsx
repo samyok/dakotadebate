@@ -76,7 +76,7 @@ export default function RegistrationForm({ onDone, data }: params) {
                                     key={JSON.stringify(question)}
                                     name={question.name}
                                     label={question.label}
-                                    isRequired={question.isRequired ?? true}
+                                    isRequired={true}
                                     inputProps={{ placeholder: question.placeholder }}
                                 />
                             ))}

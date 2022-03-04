@@ -36,14 +36,14 @@ export default function Post({ data }: props) {
                 <meta name="title" content="Dakota Debate Institute" />
                 <meta
                     name="description"
-                    content="A free debate camp for everyone. DDI is for 7th through 12th graders who are aspiring to learn about debate and research as a whole. We teach two formats: Lincoln-Douglas Debate and Public Forum Debate."
+                    content="A tuition-free debate camp for everyone. DDI is for 7th through 12th graders who are aspiring to learn about debate and research as a whole. We teach two formats: Lincoln-Douglas Debate and Public Forum Debate."
                 />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://dakotadebate.org/" />
                 <meta property="og:title" content="Dakota Debate Institute" />
                 <meta
                     property="og:description"
-                    content="A free debate camp for everyone. DDI is for 7th through 12th graders who are aspiring to learn about debate and research as a whole. We teach two formats: Lincoln-Douglas Debate and Public Forum Debate."
+                    content="A tuition-free debate camp for everyone. DDI is for 7th through 12th graders who are aspiring to learn about debate and research as a whole. We teach two formats: Lincoln-Douglas Debate and Public Forum Debate."
                 />
                 <meta property="og:image" content="https://dakotadebate.org/BDI_logo.png" />
                 <meta property="twitter:card" content="summary_large_image" />
@@ -51,7 +51,7 @@ export default function Post({ data }: props) {
                 <meta property="twitter:title" content="Dakota Debate Institute" />
                 <meta
                     property="twitter:description"
-                    content="A free debate camp for everyone. DDI is for 7th through 12th graders who are aspiring to learn about debate and research as a whole. We teach two formats: Lincoln-Douglas Debate and Public Forum Debate."
+                    content="A tuition-free debate camp for everyone. DDI is for 7th through 12th graders who are aspiring to learn about debate and research as a whole. We teach two formats: Lincoln-Douglas Debate and Public Forum Debate."
                 />
                 <meta property="twitter:image" content="https://dakotadebate.org/BDI_logo.png" />
             </Head>

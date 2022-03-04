@@ -5,7 +5,8 @@
 import Head from "next/head";
 import styles from "../styles/Enroll.module.sass";
 import React, { useState } from "react";
-import { connectToDatabase } from "../utils/mongodb";
+// @ts-ignore
+import clientPromise from '../utils/mongodb'
 import { Box, ChakraProvider, Stack } from "@chakra-ui/react";
 import RegistrationForm from "../components/RegistrationForm";
 
@@ -37,14 +38,14 @@ export default function Home(opts: opts) {
                 <meta name="title" content="Dakota Debate Institute" />
                 <meta
                     name="description"
-                    content="A free debate camp for everyone. DDI is for 7th through 12th graders who are aspiring to learn about debate and research as a whole. We teach two formats: Lincoln-Douglas Debate and Public Forum Debate."
+                    content="A tuition-free debate camp for everyone. DDI is for 7th through 12th graders who are aspiring to learn about debate and research as a whole. We teach two formats: Lincoln-Douglas Debate and Public Forum Debate."
                 />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://dakotadebate.org/" />
                 <meta property="og:title" content="Dakota Debate Institute" />
                 <meta
                     property="og:description"
-                    content="A free debate camp for everyone. DDI is for 7th through 12th graders who are aspiring to learn about debate and research as a whole. We teach two formats: Lincoln-Douglas Debate and Public Forum Debate."
+                    content="A tuition-free debate camp for everyone. DDI is for 7th through 12th graders who are aspiring to learn about debate and research as a whole. We teach two formats: Lincoln-Douglas Debate and Public Forum Debate."
                 />
                 <meta property="og:image" content="https://dakotadebate.org/BDI_logo.png" />
                 <meta property="twitter:card" content="summary_large_image" />
@@ -52,7 +53,7 @@ export default function Home(opts: opts) {
                 <meta property="twitter:title" content="Dakota Debate Institute" />
                 <meta
                     property="twitter:description"
-                    content="A free debate camp for everyone. DDI is for 7th through 12th graders who are aspiring to learn about debate and research as a whole. We teach two formats: Lincoln-Douglas Debate and Public Forum Debate."
+                    content="A tuition-free debate camp for everyone. DDI is for 7th through 12th graders who are aspiring to learn about debate and research as a whole. We teach two formats: Lincoln-Douglas Debate and Public Forum Debate."
                 />
                 <meta property="twitter:image" content="https://dakotadebate.org/BDI_logo.png" />
             </Head>
@@ -72,7 +73,7 @@ export default function Home(opts: opts) {
                     )}
                     {done && (
                         <>
-                            <h2>You&apos;re done!</h2>
+                            <h2>Thanks for registering!</h2>
 
                             <Box
                                 borderWidth="1px"
@@ -86,10 +87,10 @@ export default function Home(opts: opts) {
                                     <p>
                                         As we get closer to the camp, we&apos;ll send out login
                                         information and other important details. Mark your calendar
-                                        for August 2-9!
+                                        for June 25-30!
                                     </p>
-                                    <p>You should get a confirmation email soon.</p>
-                                    <p>Thanks for enrolling! We can&apos;t wait to teach you.</p>
+                                    <p>You should get a confirmation email soon, and an email with payment details in the next few weeks.</p>
+                                    <p>Thanks for your interest! We can&apos;t wait to teach you.</p>
                                 </Stack>
                             </Box>
                         </>
@@ -120,12 +121,23 @@ export default function Home(opts: opts) {
     );
 }
 
+
 export async function getServerSideProps() {
-    const { client } = await connectToDatabase();
-
-    const isConnected = await client.isConnected();
-
-    return {
-        props: { isConnected },
-    };
+    try {
+        // client.db() will be the default database passed in the MONGODB_URI
+        // You can change the database by calling the client.db() function and specifying a database like:
+        // const db = client.db("myDatabase");
+        // Then you can execute queries against your database like so:
+        // db.find({}) or any of the MongoDB Node Driver commands
+        // @ts-ignore
+        await clientPromise
+        return {
+            props: { isConnected: true },
+        }
+    } catch (e) {
+        console.error(e)
+        return {
+            props: { isConnected: false },
+        }
+    }
 }

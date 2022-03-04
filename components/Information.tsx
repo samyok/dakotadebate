@@ -18,7 +18,7 @@ export default function Information() {
                 <div className="img-placeholder" />
                 <div className="text">
                     <p>
-                        Last year, Aditya Tummala and Prasoon Kharel, in an effort to revive a dying
+                        Two years ago, Aditya Tummala and Prasoon Kharel, in an effort to revive a dying
                         debate program at Brookings High School, began an online debate camp
                         (BHSODC) as a pilot for DDI. BHSODC was a resounding success, with the
                         number of active debate members growing from 5 members to over 20 members.

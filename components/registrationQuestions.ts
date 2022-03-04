@@ -1,16 +1,11 @@
 const pages = [
     {
-        title: "First, some information about the student.",
+        title: "Reserve your spot! We'll figure out the payment details in a couple weeks.",
         data: [
             {
-                name: "studentFirstName",
-                label: "Student First Name",
-                placeholder: "John",
-            },
-            {
-                name: "studentLastName",
-                label: "Student Last Name",
-                placeholder: "Doe",
+                name: "studentName",
+                label: "Student Name",
+                placeholder: "John Doe",
             },
             {
                 name: "studentEmail",
@@ -29,62 +24,62 @@ const pages = [
             },
             {
                 name: "studentGrade",
-                label: "Grade entering, fall 2021",
+                label: "Grade entering, fall 2022",
                 placeholder: "9th",
             },
         ],
     },
-    {
-        title: "Second, some information about the parent.",
-        data: [
-            {
-                name: "parentFirstName",
-                label: "Parent First Name",
-                placeholder: "John", // placeholders are fake examples
-            },
-            {
-                name: "parentLastName",
-                label: "Parent Last Name",
-                placeholder: "Doe", // placeholders are fake examples
-            },
-            {
-                name: "parentEmail",
-                label: "Parent Email",
-                placeholder: "john.doe@gmail.com", // placeholders are fake examples
-            },
-            {
-                name: "parentPhoneNumber",
-                label: "Parent Phone Number",
-                placeholder: "+1 (605) 555-DEB8", // placeholders are fake examples
-            },
-            {
-                name: "address",
-                label: "Mailing Address",
-                placeholder: "444 Cross Ex Ave", // placeholders are fake examples
-            },
-            {
-                name: "addressDetails",
-                label: "Apt, Suite, Bldg.",
-                placeholder: "Apt, Suite, Bldg.", // make cute examples on ur own
-                isRequired: false,
-            },
-            {
-                name: "city",
-                label: "City",
-                placeholder: "City",
-            },
-            {
-                name: "zip",
-                label: "Zip",
-                placeholder: "Zip",
-            },
-            {
-                name: "state",
-                label: "State",
-                placeholder: "South Dakota",
-            },
-        ],
-    },
+    // {
+    //     title: "Second, some information about the parent.",
+    //     data: [
+    //         {
+    //             name: "parentFirstName",
+    //             label: "Parent First Name",
+    //             placeholder: "John", // placeholders are fake examples
+    //         },
+    //         {
+    //             name: "parentLastName",
+    //             label: "Parent Last Name",
+    //             placeholder: "Doe", // placeholders are fake examples
+    //         },
+    //         {
+    //             name: "parentEmail",
+    //             label: "Parent Email",
+    //             placeholder: "john.doe@gmail.com", // placeholders are fake examples
+    //         },
+    //         {
+    //             name: "parentPhoneNumber",
+    //             label: "Parent Phone Number",
+    //             placeholder: "+1 (605) 555-DEB8", // placeholders are fake examples
+    //         },
+    //         {
+    //             name: "address",
+    //             label: "Mailing Address",
+    //             placeholder: "444 Cross Ex Ave", // placeholders are fake examples
+    //         },
+    //         {
+    //             name: "addressDetails",
+    //             label: "Apt, Suite, Bldg.",
+    //             placeholder: "Apt, Suite, Bldg.", // make cute examples on ur own
+    //             isRequired: false,
+    //         },
+    //         {
+    //             name: "city",
+    //             label: "City",
+    //             placeholder: "City",
+    //         },
+    //         {
+    //             name: "zip",
+    //             label: "Zip",
+    //             placeholder: "Zip",
+    //         },
+    //         {
+    //             name: "state",
+    //             label: "State",
+    //             placeholder: "South Dakota",
+    //         },
+    //     ],
+    // },
     {
         title: "Almost done! We just need some debate-y information from you.",
         data: [
@@ -99,14 +94,14 @@ const pages = [
                 placeholder: "0 (approximation is ok)",
             },
             {
-                name: "studentPartner",
-                label: "If you wish to be put with a partner, feel free to list your partner here.",
-                placeholder: "(you can just put N/A or '-' here)",
+                name: "studentCampFormatPreference",
+                label: "How would you attend camp? You don't need to pay now, this is just to reserve your spot - you'll get an email with payment information later.",
+                placeholder: ["Online", "Full In-Person", "Commuter with meals", "Commuter"].join(", "),
             },
             {
                 name: "studentHear",
                 label: "How did you hear about us?",
-                placeholder: "Friend, coach, parent, etc.",
+                placeholder: "Friend, coach, parent, flyer, etc.",
             },
         ],
     },

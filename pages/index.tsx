@@ -1,7 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.sass";
 import React from "react";
-import { connectToDatabase } from "../utils/mongodb";
 import Hero from "../components/hero";
 import OurStaff from "../components/staff";
 import Information from "../components/Information";
@@ -12,9 +11,9 @@ import ContactUs from "../components/ContactUsForm";
 type opts = {};
 
 const description_meta =
-    "Summer debate camps often cost thousands of dollars. DDI is different. With a COMPLETELY FREE camp run by" +
-    " volunteers, DDI aims to empower EVERY aspiring student. Because our team is run entirely by debaters who" +
-    " have debated this year, we bring you the tactics that are relevant to the evolving South Dakota debate field.";
+    "Summer debate camps often cost thousands of dollars. DDI is different. With a camp run by" +
+    " volunteers, DDI aims to empower EVERY aspiring student. Because our team is run entirely by current and former" +
+    " debaters, we bring you the tactics that are relevant to the evolving South Dakota debate field.";
 export default function Home(opts: opts) {
     return (
         <div className={styles.container}>
@@ -38,8 +37,8 @@ export default function Home(opts: opts) {
             <main className={styles.main}>
                 <Navigation />
                 <Hero />
-                <OurStaff />
                 <FAQ />
+                <OurStaff />
                 <Information />
                 <ContactUs />
             </main>

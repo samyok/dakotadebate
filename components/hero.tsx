@@ -70,19 +70,20 @@ export default function Hero() {
                 />
             </div>
             <div className={styles.hero}>
-                <h1>South Dakota’s free, online debate institute for everyone.</h1>
-                {/*<div className={styles.btn}>*/}
-                {/*    <Link href={"/enroll"}>*/}
-                {/*        <a className={styles.button}>Register now!</a>*/}
-                {/*    </Link>*/}
-                {/*    <p>August 2-9, 2021</p>*/}
-                {/*</div>*/}
+                <h1>Debate camps can be really expensive. DDI is not.</h1>
+                <div className={styles.btn}>
+                    <Link href={"/enroll"}>
+                        <a className={styles.button}>Reserve your spot now!</a>
+                    </Link>
+                    <p>June 25-30, 2022</p>
+                    <p>Hybrid: SDSU or Online</p>
+                </div>
                 <div className={styles.btn}>
                     {/*<Link href={"/enroll"}>*/}
                     {/*    <a className={styles.button}></a>*/}
                     {/*</Link>*/}
-                    <p>Registration closed for 2021</p>
-                    <p>2022 registration will open this winter!</p>
+                    {/*<p>Registration closed for 2021</p>*/}
+                    {/*<p>2022 registration will open this winter!</p>*/}
                 </div>
             </div>
         </div>

@@ -9,15 +9,20 @@ export default function FAQ() {
         <div className={"container"} id="faq">
             <BorderedH2>FAQ</BorderedH2>
             <Collapsible q={"When is the camp?"}>
-                The online camp will take place from <b>August 2nd to August 9th, 2021.</b> Classes
-                will be held on weekdays, with a camp tournament on the last day. Our team will be
-                online helping prepare evidence, cases, and rebuttals as needed over the weekend.
+                Both the online and in-person camps will take place from <b>June 25nd to June 30th, 2021.</b> Classes
+                will be held for most of each day, with a camp tournament on the last day. Our team will be
+                both online and in-perosn helping prepare evidence, cases, and rebuttals.
+            </Collapsible>
+            <Collapsible q={"Where is the camp?"}>
+                In-person camp will be held at South Dakota State University.
             </Collapsible>
             <Collapsible q={"What time is the camp?"}>
-                The main lessons and workshops will be from 1-4:30 Central Time on Monday through
-                Friday, with optional fun activities and seminars throughout the evening. Through
-                the weekend, our team will be available for case help for the tournament on Monday,
-                August 9.
+                The online lessons and workshops will be from 10-4:30 Central Time on most days (subject to change),
+                with optional fun activities and seminars throughout the evening. In-person students will have
+                a similar schedule.
+
+                Our goal is to make the online and in-person camps be as similar as possible to make the camp as
+                accessible as possible.
             </Collapsible>
             <Collapsible q={"Should I join even if I have no debate experience?"}>
                 <b>YES!</b> This camp is meant to be an introductory and intermediate camp, so we
@@ -25,7 +30,12 @@ export default function FAQ() {
                 the novice and intermediate groups during classes.
             </Collapsible>
             <Collapsible q={"How much does this camp cost?"}>
-                Nothing! The camp is completely free.
+                <ul>
+                    <li><b>In-person, with dorms and meals</b> - $550</li>
+                    <li><b>In-person, commuter with meals</b> - $275</li>
+                    <li><b>In-person, commuter without meals</b> - Free</li>
+                    <li><b>Online</b> - Free</li>
+                </ul>
             </Collapsible>
             <Collapsible q={"Who is Dakota Debate Institute for?"}>
                 DDI is for 7th through 12th graders who want to learn about debate and research. We
@@ -33,7 +43,7 @@ export default function FAQ() {
             </Collapsible>
             <Collapsible q={"Why should I attend Dakota Debate over other camps?"}>
                 Summer debate camps often cost thousands of dollars. DDI is different. With a{" "}
-                <b>completely free</b> camp run by volunteers, DDI aims to empower <b>every</b>{" "}
+                camp run completely by volunteers, DDI aims to empower <b>every</b>{" "}
                 aspiring student. Because our team is run entirely by current and former debaters,
                 we bring you the tactics relevant to the evolving South Dakota debate field.
             </Collapsible>
@@ -42,6 +52,8 @@ export default function FAQ() {
                 Tournament, <b>six</b> South Dakota <b>state champions</b>, a{" "}
                 <b>Tournament of Champions qualifier</b>, and other experienced advisors who are the
                 best that the South Dakota debate community has to offer.
+
+                Of course, we will also have SDSU staff assisting and advising at the in-person camp for safety.
             </Collapsible>
             <Collapsible q={"What is Dakota Debate Institute?"}>
                 DDI is a camp for every established or future debater who wants to gain skills in
