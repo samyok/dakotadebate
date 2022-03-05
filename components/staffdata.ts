@@ -15,8 +15,8 @@ const staffdata = [
         name: "Catherine Liu",
         image: "/people/catherine 2.png",
         bio: `Hi!
-        I graduated from Sioux Falls Washington in 2021 and currently attend Harvard University. 
-        I competed in Lincoln-Douglas for four years, where I was a national runner-up, 2-time state champion, and 3-time national elimination round qualifier. I'll also be representing Harvard at the World Universities Debating Championships in Serbia this summer. 
+        I graduated from Sioux Falls Washington in 2021 and currently attend Harvard University.
+        I competed in Lincoln-Douglas for four years, where I was a national runner-up, 2-time state champion, and 3-time national elimination round qualifier. I now debate for Harvard in American Parliamentary and British Parliamentary debate. I’ll be representing Harvard at the World Universities Debating Championships this summer.
         Debate gave me invaluable advocacy skills, so I’m excited to introduce new debaters to this amazing community!`,
     },
     {
