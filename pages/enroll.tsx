@@ -47,7 +47,7 @@ export default function Home(opts: opts) {
                     property="og:description"
                     content="A tuition-free debate camp for everyone. DDI is for 7th through 12th graders who are aspiring to learn about debate and research as a whole. We teach two formats: Lincoln-Douglas Debate and Public Forum Debate."
                 />
-                <meta property="og:image" content="https://dakotadebate.org/BDI_logo.png" />
+                <meta property="og:image" content="https://dakotadebate.org/ddi-full.png" />
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content="https://dakotadebate.org/" />
                 <meta property="twitter:title" content="Dakota Debate Institute" />
@@ -55,7 +55,7 @@ export default function Home(opts: opts) {
                     property="twitter:description"
                     content="A tuition-free debate camp for everyone. DDI is for 7th through 12th graders who are aspiring to learn about debate and research as a whole. We teach two formats: Lincoln-Douglas Debate and Public Forum Debate."
                 />
-                <meta property="twitter:image" content="https://dakotadebate.org/BDI_logo.png" />
+                <meta property="twitter:image" content="https://dakotadebate.org/ddi-full.png" />
             </Head>
             <ChakraProvider>
                 <main className="main">
