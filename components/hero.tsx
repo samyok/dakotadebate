@@ -7,10 +7,26 @@ import particlesConfig from "./particles.config";
 import wideLogo from "../public/wide logo.png";
 import { Box, Link } from "@chakra-ui/react";
 
-export default function Hero() {
+type HeroParams = {
+  navRef: any;
+};
+
+export default function Hero({ navRef }: HeroParams) {
+  const [navHeight, setNavHeight] = useState(50);
+  useEffect(() => {
+    if (navRef && navRef?.current) {
+      setNavHeight(navRef.current.getClientRects()[0].height);
+    }
+  }, [navRef]);
   return (
-    <Box width={"full"} height={"100vh"} bg={"blackAlpha.900"}>
-      <h1>Testing</h1>
+    <Box width={"full"} height={"100vh"} mb={`-${navHeight}px`} bg={"blackAlpha.900"} pos={"relative"}>
+      <Image
+        alt="DDI 2021 Final Round Zoom Picture"
+        src="/assets/2021-final-round.png"
+        layout="fill"
+        objectFit="cover"
+      />
+      <Box bg={"rgba(0,0,0,.8)"} pos={"absolute"} top={0} left={0} width={"full"} height={"full"} />
     </Box>
   );
 }

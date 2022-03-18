@@ -1,27 +1,28 @@
 import React, { useEffect, useState } from "react";
 import {
-  chakra,
   Box,
-  Flex,
-  useColorModeValue,
-  VisuallyHidden,
-  HStack,
   Button,
+  chakra,
+  CloseButton,
+  Flex,
+  Heading,
+  HStack,
+  IconButton,
+  Link,
+  useColorModeValue,
   useDisclosure,
   VStack,
-  IconButton,
-  CloseButton,
-  Link,
-  Heading,
 } from "@chakra-ui/react";
 import { AiOutlineMenu } from "react-icons/ai";
+const TRANSITION_DURATION = "550ms";
 
 function MenuLink({ children, ...props }: any) {
   return (
     <Link
       _hover={{
-        color: "rgba(255,255, 255, 0.9)",
+        opacity: 0.9,
       }}
+      transitionDuration={TRANSITION_DURATION}
       size="sm"
       {...props}
     >
@@ -29,49 +30,45 @@ function MenuLink({ children, ...props }: any) {
     </Link>
   );
 }
-const SCROLL_DISTANCE = 120;
+
+const SCROLL_DISTANCE = 250;
 type NavigationParams = {
-  animateScroll: boolean;
+  animateScroll?: boolean;
+  navRef: any;
 };
 
-export default function Navigation({ animateScroll = true }: NavigationParams) {
+export default function Navigation({ animateScroll = true, navRef }: NavigationParams) {
   const bg = useColorModeValue("white", "gray.800");
   const mobileNav = useDisclosure();
 
   const [scrollDistance, setScrollDistance] = useState(0);
   useEffect(() => {
-    let windowWidth = window.innerWidth;
-    if (windowWidth > 900) {
-      // @ts-ignore
-      setScrollDistance(window.document.querySelector("body")?.getClientRects()[0].y * -1);
-    } else {
-      setScrollDistance(0);
-    }
+    // @ts-ignore
+    setScrollDistance(window.document.querySelector("body")?.getClientRects()[0].y * -1);
     window.addEventListener("scroll", (event) => {
-      if (window.innerWidth > 900) {
-        let distance = -1 * (window.document.querySelector("body")?.getClientRects()[0].y || 0);
-        setScrollDistance(distance);
-        // console.log(distance);
-      } else {
-        setScrollDistance(0);
-      }
+      let distance = -1 * (window.document.querySelector("body")?.getClientRects()[0].y || 0);
+      setScrollDistance(distance);
+      // console.log(distance);
     });
   }, []);
 
   // has it scrolled far enough to trigger the scrolled state?
   // or is animateScroll false
   const scrolledState = !animateScroll || scrollDistance > SCROLL_DISTANCE;
-  const slightWhite = scrolledState ? "rgba(255,255,255,0.8)" : "rgba(255,255,255,0.5)";
+  const slightWhite = scrolledState ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0)";
   return (
     <>
       <chakra.header
+        ref={navRef}
         bg={scrolledState ? "black" : "transparent"}
-        transitionDuration={"550ms"}
+        transitionDuration={TRANSITION_DURATION}
         w="full"
         px={{ base: 2, sm: 10 }}
         py={1}
         shadow={"md"}
-        pos={"fixed"}
+        pos={"sticky"}
+        top={0}
+        left={0}
       >
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
           <Link href="/">
@@ -88,6 +85,7 @@ export default function Navigation({ animateScroll = true }: NavigationParams) {
                 fontWeight={"black"}
                 mx={4}
                 color={slightWhite}
+                transitionDuration={TRANSITION_DURATION}
                 _hover={{ color: "white" }}
               >
                 Dakota Debate Institute
@@ -100,7 +98,12 @@ export default function Navigation({ animateScroll = true }: NavigationParams) {
               <MenuLink>Staff</MenuLink>
               <MenuLink>Scholarships</MenuLink>
               <MenuLink>Contact</MenuLink>
-              <Button colorScheme="purple" size="sm">
+              <Button
+                colorScheme="purple"
+                size="sm"
+                transitionDuration={TRANSITION_DURATION}
+                opacity={scrolledState ? 1 : 0}
+              >
                 Register
               </Button>
             </HStack>
@@ -113,6 +116,8 @@ export default function Navigation({ animateScroll = true }: NavigationParams) {
                 variant="outlined"
                 borderRadius={4}
                 icon={<AiOutlineMenu />}
+                opacity={scrolledState ? 1 : 0}
+                transitionDuration={TRANSITION_DURATION}
                 onClick={mobileNav.onOpen}
               />
 
@@ -132,21 +137,18 @@ export default function Navigation({ animateScroll = true }: NavigationParams) {
                 shadow="sm"
               >
                 <CloseButton aria-label="Close menu" onClick={mobileNav.onClose} />
-
-                <Button w="full" variant="ghost">
-                  Features
-                </Button>
-                <Button w="full" variant="ghost">
-                  Pricing
-                </Button>
-                <Button w="full" variant="ghost">
-                  Blog
-                </Button>
-                <Button w="full" variant="ghost">
-                  Company
-                </Button>
-                <Button w="full" variant="ghost">
-                  Sign in
+                <MenuLink>Info</MenuLink>
+                <MenuLink>Staff</MenuLink>
+                <MenuLink>Scholarships</MenuLink>
+                <MenuLink>Contact</MenuLink>
+                <MenuLink>Login</MenuLink>
+                <Button
+                  colorScheme="purple"
+                  size="sm"
+                  transitionDuration={TRANSITION_DURATION}
+                  opacity={scrolledState ? 1 : 0}
+                >
+                  Register
                 </Button>
               </VStack>
             </Box>
