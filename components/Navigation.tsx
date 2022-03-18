@@ -1,130 +1,158 @@
-/*
- * Copyright (c) 2021 Samyok Nepal.
- */
-
-import styles from "../styles/hero.module.sass";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import logo from "../public/bison_logo.png";
+import {
+  chakra,
+  Box,
+  Flex,
+  useColorModeValue,
+  VisuallyHidden,
+  HStack,
+  Button,
+  useDisclosure,
+  VStack,
+  IconButton,
+  CloseButton,
+  Link,
+  Heading,
+} from "@chakra-ui/react";
+import { AiOutlineMenu } from "react-icons/ai";
 
-const SCROLL_DISTANCE = 30;
-const TRANSITION_DURATION = "450ms";
+function MenuLink({ children, ...props }: any) {
+  return (
+    <Link
+      _hover={{
+        color: "rgba(255,255, 255, 0.9)",
+      }}
+      size="sm"
+      {...props}
+    >
+      {children}
+    </Link>
+  );
+}
+const SCROLL_DISTANCE = 120;
+type NavigationParams = {
+  animateScroll: boolean;
+};
 
-export default function Navigation() {
-    let [scrollDistance, setScrollDistance] = useState(0);
-    useEffect(() => {
-        let windowWidth = window.innerWidth;
-        if (windowWidth > 900) {
-            // @ts-ignore
-            setScrollDistance(window.document.querySelector("body")?.getClientRects()[0].y * -1);
-        } else {
-            setScrollDistance(0);
-        }
-        window.addEventListener("scroll", event => {
-            if (window.innerWidth > 900) {
-                let distance =
-                    -1 * (window.document.querySelector("body")?.getClientRects()[0].y || 0);
-                setScrollDistance(distance);
-                // console.log(distance);
-            } else {
-                setScrollDistance(0);
-            }
-        });
-    }, []);
-    return (
-        <>
-            <div
-                className={
-                    scrollDistance > SCROLL_DISTANCE
-                        ? styles.gradientBackground
-                        : styles.gradientBackgroundInactive
-                }>
-                <div
-                    className={`${styles.navigation} ${
-                        scrollDistance > SCROLL_DISTANCE ? styles.compact : ""
-                    }`}>
-                    <div className={styles.logo}>
-                        <div className={"logoContainer"}>
-                            <Image
-                                layout={"responsive"}
-                                src={logo}
-                                alt={"DDI Logo"}
-                                priority={true}
-                            />
-                        </div>
-                        <h2>Dakota Debate Institute</h2>
-                    </div>
-                    <div className={styles.menu}>
-                        <a className={styles.link} href="#faq">
-                            FAQ
-                        </a>
-                        <a className={styles.link} href="#people">
-                            Our Team
-                        </a>
-                        <a className={styles.link} href="#history">
-                            History
-                        </a>
-                        <a className={styles.link} href="#contact">
-                            Contact Us
-                        </a>
-                        {/*<a className={`${styles.link}`} href="/login">*/}
-                        {/*    Login*/}
-                        {/*</a>*/}
-                    </div>
-                </div>
-            </div>
+export default function Navigation({ animateScroll = true }: NavigationParams) {
+  const bg = useColorModeValue("white", "gray.800");
+  const mobileNav = useDisclosure();
 
-            {<div className={scrollDistance > 300000 ? "spacer" : "spacer-default"} />}
-            <style jsx>{`
-                * {
-                    transition-duration: ${TRANSITION_DURATION} !important;
-                }
+  const [scrollDistance, setScrollDistance] = useState(0);
+  useEffect(() => {
+    let windowWidth = window.innerWidth;
+    if (windowWidth > 900) {
+      // @ts-ignore
+      setScrollDistance(window.document.querySelector("body")?.getClientRects()[0].y * -1);
+    } else {
+      setScrollDistance(0);
+    }
+    window.addEventListener("scroll", (event) => {
+      if (window.innerWidth > 900) {
+        let distance = -1 * (window.document.querySelector("body")?.getClientRects()[0].y || 0);
+        setScrollDistance(distance);
+        // console.log(distance);
+      } else {
+        setScrollDistance(0);
+      }
+    });
+  }, []);
 
-                h2 {
-                    font-family: "Mate SC", serif;
-                    color: white;
-                    font-size: min(8.1vw, 100px);
-                    position: absolute;
-                    top: 175px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    transition-duration: 500ms;
-                    display: inline;
-                    margin: 0;
-                    white-space: nowrap;
-                }
+  // has it scrolled far enough to trigger the scrolled state?
+  // or is animateScroll false
+  const scrolledState = !animateScroll || scrollDistance > SCROLL_DISTANCE;
+  const slightWhite = scrolledState ? "rgba(255,255,255,0.8)" : "rgba(255,255,255,0.5)";
+  return (
+    <>
+      <chakra.header
+        bg={scrolledState ? "black" : "transparent"}
+        transitionDuration={"550ms"}
+        w="full"
+        px={{ base: 2, sm: 10 }}
+        py={1}
+        shadow={"md"}
+        pos={"fixed"}
+      >
+        <Flex alignItems="center" justifyContent="space-between" mx="auto">
+          <Link href="/">
+            <Flex alignItems={"center"} cursor={"pointer"}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <chakra.img
+                w={{ base: "65px", md: "95px", lg: "100px" }}
+                src="/outlined_bison.png"
+                alt={"logo"}
+              />
+              <Heading
+                fontFamily={"Merriweather"}
+                fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
+                fontWeight={"black"}
+                mx={4}
+                color={slightWhite}
+                _hover={{ color: "white" }}
+              >
+                Dakota Debate Institute
+              </Heading>
+            </Flex>
+          </Link>
+          <HStack display="flex" alignItems="center" spacing={1}>
+            <HStack color={slightWhite} spacing={8} display={{ base: "none", md: "inline-flex" }}>
+              <MenuLink>Info</MenuLink>
+              <MenuLink>Staff</MenuLink>
+              <MenuLink>Scholarships</MenuLink>
+              <MenuLink>Contact</MenuLink>
+              <Button colorScheme="purple" size="sm">
+                Register
+              </Button>
+            </HStack>
+            <Box display={{ base: "inline-flex", md: "none" }}>
+              <IconButton
+                display={{ base: "flex", md: "none" }}
+                aria-label="Open menu"
+                fontSize="20px"
+                color={slightWhite}
+                variant="outlined"
+                borderRadius={4}
+                icon={<AiOutlineMenu />}
+                onClick={mobileNav.onOpen}
+              />
 
-                .logoContainer {
-                    width: 300px;
-                    position: absolute;
-                    left: 50%;
-                    top: -50px;
-                    transition-duration: 500ms;
-                    transform: translateX(-50%);
-                }
+              <VStack
+                pos="absolute"
+                top={0}
+                left={0}
+                right={0}
+                display={mobileNav.isOpen ? "flex" : "none"}
+                flexDirection="column"
+                p={2}
+                pb={4}
+                m={2}
+                bg={bg}
+                spacing={3}
+                rounded="sm"
+                shadow="sm"
+              >
+                <CloseButton aria-label="Close menu" onClick={mobileNav.onClose} />
 
-                .${styles.compact} .logoContainer {
-                    width: 150px;
-                    margin: 0;
-                    left: 5%;
-                    transform: translateX(0);
-                    top: -30px;
-                }
-
-                .${styles.compact} h2 {
-                    top: 7px;
-                    left: calc(5% + 165px);
-                    transform: translateX(0);
-                }
-
-                .spacer {
-                    height: 300px;
-                }
-
-                .spacer-default {
-                    height: 300px;
-                }
-            `}</style>
-        </>
-    );
+                <Button w="full" variant="ghost">
+                  Features
+                </Button>
+                <Button w="full" variant="ghost">
+                  Pricing
+                </Button>
+                <Button w="full" variant="ghost">
+                  Blog
+                </Button>
+                <Button w="full" variant="ghost">
+                  Company
+                </Button>
+                <Button w="full" variant="ghost">
+                  Sign in
+                </Button>
+              </VStack>
+            </Box>
+          </HStack>
+        </Flex>
+      </chakra.header>
+    </>
+  );
 }
