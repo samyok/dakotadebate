@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Box, Button, chakra, Heading, Text, VStack } from "@chakra-ui/react";
 import trackEvent from "./trackEvent";
+import backgroundImage from "../assets/2021-final-round.png";
 
 type HeroParams = {
   navRef: any;
@@ -27,9 +28,10 @@ export default function Hero({ navRef }: HeroParams) {
     <Box width={"full"} height={"100vh"} mb={`-${navHeight}px`} bg={"blackAlpha.900"} pos={"relative"}>
       <Image
         alt="DDI 2021 Final Round Zoom Picture"
-        src="/assets/2021-final-round.png"
+        src={backgroundImage}
         layout="fill"
         objectFit="cover"
+        placeholder={"blur"}
       />
       <VStack
         justifyContent={"center"}
