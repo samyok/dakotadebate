@@ -32,6 +32,8 @@ export default function Hero({ navRef }: HeroParams) {
         layout="fill"
         objectFit="cover"
         placeholder={"blur"}
+        priority={true}
+        quality={1}
       />
       <VStack
         justifyContent={"center"}
