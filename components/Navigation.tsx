@@ -59,6 +59,7 @@ export default function Navigation({ animateScroll = true, navRef }: NavigationP
   return (
     <>
       <chakra.header
+        zIndex={scrolledState ? 2 : 0}
         ref={navRef}
         bg={scrolledState ? "black" : "transparent"}
         transitionDuration={TRANSITION_DURATION}
