@@ -14,6 +14,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { AiOutlineMenu } from "react-icons/ai";
+import Logo from "./Logo";
 const TRANSITION_DURATION = "550ms";
 
 function MenuLink({ children, ...props }: any) {
@@ -72,27 +73,7 @@ export default function Navigation({ animateScroll = true, navRef }: NavigationP
         left={0}
       >
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
-          <Link href="/">
-            <Flex alignItems={"center"} cursor={"pointer"}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <chakra.img
-                w={{ base: "65px", md: "95px", lg: "100px" }}
-                src="/outlined_bison.png"
-                alt={"logo"}
-              />
-              <Heading
-                fontFamily={"Merriweather"}
-                fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
-                fontWeight={"black"}
-                mx={4}
-                color={slightWhite}
-                transitionDuration={TRANSITION_DURATION}
-                _hover={{ color: "white" }}
-              >
-                Dakota Debate Institute
-              </Heading>
-            </Flex>
-          </Link>
+          <Logo color={slightWhite} _hover={{ color: "white" }} transitionDuration={TRANSITION_DURATION} />
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack color={slightWhite} spacing={8} display={{ base: "none", md: "inline-flex" }}>
               <MenuLink>Info</MenuLink>

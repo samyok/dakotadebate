@@ -7,6 +7,14 @@ const theme = extendTheme({
       baseStyle: {
         fontFamily: "Spectral, serif",
         fontWeight: "500",
+        letterSpacing: "-0.03em",
+      },
+    },
+    Text: {
+      baseStyle: {
+        fontFamily:
+          "Gothic A1. --apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
+        fontSize: "xl",
       },
     },
   },

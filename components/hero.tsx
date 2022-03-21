@@ -21,6 +21,7 @@ export default function Hero({ navRef }: HeroParams) {
         setNavHeight(navRef.current.getClientRects()[0].height);
       }
     };
+    setTimeout(listener, 250);
     window.addEventListener("resize", listener);
     return () => window.removeEventListener("resize", listener);
   }, []);
