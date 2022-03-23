@@ -37,6 +37,14 @@ type NavigationParams = {
   animateScroll?: boolean;
   navRef: any;
 };
+const MenuLinks = () => (
+  <>
+    <MenuLink href={"/#what-is-ddi"}>Info</MenuLink>
+    <MenuLink href={"/staff"}>Staff</MenuLink>
+    <MenuLink href={"/#pricing"}>Cost</MenuLink>
+    <MenuLink href={"/#scholarships"}>Scholarships</MenuLink>
+  </>
+);
 
 export default function Navigation({ animateScroll = true, navRef }: NavigationParams) {
   const bg = useColorModeValue("white", "gray.800");
@@ -76,10 +84,7 @@ export default function Navigation({ animateScroll = true, navRef }: NavigationP
           <Logo color={slightWhite} _hover={{ color: "white" }} transitionDuration={TRANSITION_DURATION} />
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack color={slightWhite} spacing={8} display={{ base: "none", md: "inline-flex" }}>
-              <MenuLink>Info</MenuLink>
-              <MenuLink>Staff</MenuLink>
-              <MenuLink>Scholarships</MenuLink>
-              <MenuLink>Contact</MenuLink>
+              <MenuLinks />
               <Button
                 colorScheme="purple"
                 size="sm"
@@ -117,12 +122,10 @@ export default function Navigation({ animateScroll = true, navRef }: NavigationP
                 spacing={3}
                 rounded="sm"
                 shadow="sm"
+                onClick={mobileNav.onClose}
               >
-                <CloseButton aria-label="Close menu" onClick={mobileNav.onClose} />
-                <MenuLink>Info</MenuLink>
-                <MenuLink>Staff</MenuLink>
-                <MenuLink>Scholarships</MenuLink>
-                <MenuLink>Contact</MenuLink>
+                <CloseButton aria-label="Close menu" />
+                <MenuLinks />
                 <MenuLink>Login</MenuLink>
                 <Button
                   colorScheme="purple"

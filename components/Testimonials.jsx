@@ -121,8 +121,8 @@ export default function Testimonials() {
           flexGrow={1}
           my={4}
           mx={5}
-          maxW={"min(600px, 90%)"}
-          idth="345px"
+          maxW={"min(400px, 90%)"}
+          width="345px"
           viewBox="0 0 545 545"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

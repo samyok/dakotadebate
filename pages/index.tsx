@@ -5,18 +5,22 @@ import Hero from "../components/hero";
 import Navigation from "../components/Navigation";
 import ContactUs from "../components/ContactUsForm";
 import { Layout } from "../components/Layout";
-import { Button, Flex, HStack, Link, Text, IconButton } from "@chakra-ui/react";
+import { Button, chakra, Flex, HStack, IconButton, Link, Text } from "@chakra-ui/react";
 import SectionHeading from "../components/SectionHeading";
 import PurpleCard, { SVGs } from "../components/PurpleCard";
 import { AiOutlineArrowRight, AiOutlineFacebook, AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
 import NextLink from "next/link";
 import Testimonials from "../components/Testimonials";
+import BlackBanner from "../components/BlackBanner";
+import PricingCard, { PricingCardParams } from "../components/PricingCard";
+
 type opts = {};
 
 const description_meta =
   "Summer debate camps often cost thousands of dollars. DDI is different. With a camp run by" +
   " volunteers, DDI aims to empower EVERY aspiring student. Because our team is run entirely by current and former" +
   " debaters, we bring you the tactics that are relevant to the evolving South Dakota debate field.";
+
 function IconSocialLink({ icon, href }: any): JSX.Element {
   return (
     <NextLink href={href} passHref>
@@ -24,8 +28,8 @@ function IconSocialLink({ icon, href }: any): JSX.Element {
         isRound
         target={"_blank"}
         as={"a"}
-        variant={"outline"}
-        size={"lg"}
+        variant={"ghost"}
+        fontSize={"2xl"}
         colorScheme={"purple"}
         icon={icon}
         aria-label={"button"}
@@ -33,6 +37,103 @@ function IconSocialLink({ icon, href }: any): JSX.Element {
     </NextLink>
   );
 }
+
+const data: { [key: string]: PricingCardParams } = {
+  inPerson: {
+    name: "In Person",
+    price: 550,
+    recommend: true,
+    details: [
+      {
+        type: "pro",
+        text: "Most popular choice!",
+      },
+      {
+        type: "pro",
+        text: "Personalized help from our staff",
+      },
+      {
+        type: "pro",
+        text: "6 days of intense debate education",
+      },
+      {
+        type: "pro",
+        text: "3 meals each day",
+      },
+      {
+        type: "pro",
+        text: "Stay in Thorne Hall at SDSU",
+      },
+
+      {
+        type: "pro",
+        text: "Meet and have fun with new friends!",
+      },
+    ],
+  },
+  commuter: {
+    name: "Commuter",
+    price: 275,
+    recommend: false,
+    details: [
+      {
+        type: "info",
+        text: "For those living near SDSU",
+      },
+      {
+        type: "info",
+        text: "Free if you bring your own meals",
+      },
+      {
+        type: "pro",
+        text: "Personalized help from our staff",
+      },
+
+      {
+        type: "pro",
+        text: "6 days of intense debate education",
+      },
+
+      {
+        type: "pro",
+        text: "Lunch and Dinner provided",
+      },
+      { type: "con", text: "Sleep at home, come to campus each day" },
+      {
+        type: "pro",
+        text: "Meet and have fun with new friends!",
+      },
+    ],
+  },
+  free: {
+    name: "Online",
+    price: 0,
+    recommend: false,
+    details: [
+      {
+        type: "info",
+        text: "For those who cannot make it in-person",
+      },
+      {
+        type: "pro",
+        text: "6 days of live-streamed debate education",
+      },
+      {
+        type: "pro",
+        text: "Class recordings to watch later",
+      },
+      {
+        type: "con",
+        text: "Personalized help from our staff",
+      },
+      {
+        type: "info",
+        text: "We strongly recommend the other two options (we have scholarships!)",
+      },
+    ],
+  },
+};
+
 export default function Home(opts: opts) {
   const navRef = useRef<HTMLElement>();
   return (
@@ -60,24 +161,38 @@ export default function Home(opts: opts) {
         <Navigation navRef={navRef} />
         <Layout>
           <SectionHeading>What is DDI?</SectionHeading>
-          <Flex>
-            <Text>
+          <Flex justifyContent={"space-evenly"} alignItems={"center"}>
+            <Text width={{ base: "100%", lg: "50%" }} flexGrow={1}>
               DDI is the <b>only</b> debate camp teaching Public Forum and Lincoln-Douglas debate in South
               Dakota. Over 6 days, students with <b>any level of experience</b> will work closely with
               qualified staff to learn how to effectively argue, research, and communicate. This year, we are
               hosting camp <b>in person at South Dakota State University</b> from <b>June 25-30</b>.
             </Text>
+            <Flex display={{ base: "none", lg: "flex" }}>
+              <chakra.img mx={8} width={"210px"} src={"/bison_logo.png"} alt={""} />
+              <chakra.img
+                width={"210px"}
+                src={
+                  "https://www.sdstate.edu/sites/default/files/styles/wallet_size_scale_325_width_/public/SDLogo3c.jpg?itok=mrXIQB3_"
+                }
+                alt={""}
+                style={{ filter: "grayscale()" }}
+              />
+            </Flex>
           </Flex>
         </Layout>
         <Layout pt={8}>
           <SectionHeading>Why DDI?</SectionHeading>
           <Flex flexWrap={"wrap"} justifyContent={"space-around"}>
             <PurpleCard title={"Qualified Staff."} icon={SVGs.staff}>
-              <Text fontSize={"md"} mb={4} flexGrow={1}>
+              <Text fontSize={"md"} mb={2}>
                 Our volunteer staff includes a <b>2nd-place national finalist</b> in Lincoln-Douglas,{" "}
                 <b>six state champions</b>, and a <b>Tournament of Champions</b> qualifier. All of our staff
                 has graduated within the past two years, so we’re familiar with the South Dakota debate
-                circuit. We will also have SDSU staff assisting at the in-person camp.
+                circuit.
+              </Text>
+              <Text fontSize={"md"} flexGrow={1}>
+                We will also have SDSU staff and coaches at the in-person camp.
               </Text>
               <HStack>
                 <Button
@@ -92,14 +207,13 @@ export default function Home(opts: opts) {
             </PurpleCard>
             <PurpleCard title={"Accessibility."} icon={SVGs.money}>
               <Text fontSize={"md"} mb={4} flexGrow={1}>
-                Many debate camps can cost thousands of dollars. We are a{" "}
+                Most debate camps cost thousands of dollars. We are a{" "}
                 <Link href="/support" isExternal color={"purple.300"}>
                   501(c)(3) public charity
                 </Link>{" "}
                 dedicated to providing accessible debate education. Our camp is <b>tuition-free</b> (all costs
-                go to in-person accommodations), and we offer <b>multiple packages</b> to serve everyone. If
-                you need financial assistance, it is our goal to meet{" "}
-                <b>100% of demonstrated financial need</b>.
+                go to in-person accommodations). If you need financial assistance, it is our goal to meet{" "}
+                <b>100% of financial need</b>.
               </Text>
               <HStack spacing={4} wrap={"wrap"}>
                 <Button colorScheme={"purple"} href={"#staff"} variant={"solid"}>
@@ -151,6 +265,23 @@ export default function Home(opts: opts) {
           <SectionHeading>Don’t just hear it from us.</SectionHeading>
           <Testimonials />
         </Layout>
+        <div id={"pricing"} />
+        <Layout py={8}>
+          <SectionHeading>Pricing</SectionHeading>
+          <Text fontSize={"2xl"} textAlign={"center"}>
+            Most debate camps cost thousands (plural!) of dollars, which make them prohibitively expensive for
+            most families.
+            <br />
+            Our goal is to <b>make debate more accessible.</b>
+          </Text>
+          <Flex justifyContent={"center"} py={6} alignItems={"center"} flexWrap={"wrap"}>
+            <PricingCard {...data.commuter} />
+            <PricingCard {...data.inPerson} />
+            <PricingCard {...data.free} />
+          </Flex>
+        </Layout>
+        <div id={"scholarships"} />
+        <BlackBanner />
         <ContactUs />
       </main>
 

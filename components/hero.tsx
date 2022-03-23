@@ -21,9 +21,12 @@ export default function Hero({ navRef }: HeroParams) {
         setNavHeight(navRef.current.getClientRects()[0].height);
       }
     };
-    setTimeout(listener, 250);
+    const interval = setInterval(listener, 250);
     window.addEventListener("resize", listener);
-    return () => window.removeEventListener("resize", listener);
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("resize", listener);
+    };
   }, []);
   return (
     <Box width={"full"} height={"100vh"} mb={`-${navHeight}px`} bg={"blackAlpha.900"} pos={"relative"}>
