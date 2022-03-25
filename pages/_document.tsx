@@ -41,6 +41,7 @@ class MyDocument extends Document {
 
           <script async defer data-website-id="9581c235-7870-44ae-a4ff-665900654c78" src="/a.js" />
           <script dangerouslySetInnerHTML={{ __html: amplitudeJS }} />
+          <meta name="theme-color" content="#000" />
         </Head>
         <body>
           <Main />

@@ -15,9 +15,14 @@ import {
 } from "@chakra-ui/react";
 import { AiOutlineMenu } from "react-icons/ai";
 import Logo from "./Logo";
+import trackEvent from "./trackEvent";
 const TRANSITION_DURATION = "550ms";
 
-function MenuLink({ children, ...props }: any) {
+function MenuLink({ children, onClick, ...props }: any) {
+  const handler = () => {
+    trackEvent(`Navigation: ${children}`);
+    if (onClick) onClick();
+  };
   return (
     <Link
       _hover={{
@@ -25,6 +30,7 @@ function MenuLink({ children, ...props }: any) {
       }}
       transitionDuration={TRANSITION_DURATION}
       size="sm"
+      onClick={handler}
       {...props}
     >
       {children}

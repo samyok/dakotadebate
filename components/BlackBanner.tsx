@@ -31,7 +31,7 @@ export default function BlackBanner() {
       >
         <VStack spacing={4} pb={8}>
           <Heading size={"3xl"} maxWidth={"min(100%, 700px)"}>
-            Scholarships!!!
+            Scholarships!
           </Heading>
           <Text fontSize={"2xl"} fontWeight={"300"} mt={4}>
             Please apply if you need it, we don't want you to commute an hour every day!

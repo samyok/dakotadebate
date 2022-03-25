@@ -22,15 +22,17 @@
     "json2csv": "^5.0.6",
     "mongodb": "^4.4.1",
     "nanoid": "^3.1.23",
-    "next": "11.0.1",
+    "next": "12",
     "nodemailer": "^6.6.2",
     "phone": "^2.4.21",
     "plivo": "^4.19.0",
     "react": "17.0.2",
     "react-bootstrap-icons": "^1.5.0",
+    "react-div-100vh": "^0.7.0",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
     "sass": "^1.35.1",
+    "seamless-scroll-polyfill": "^2.1.8",
     "sharp": "^0.30.3"
   },
   "devDependencies": {

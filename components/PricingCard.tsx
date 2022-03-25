@@ -4,6 +4,7 @@ import { CheckIcon, CloseIcon, InfoIcon } from "@chakra-ui/icons";
 export type ListItem = {
   type: "info" | "pro" | "con";
   text: string;
+  bold?: boolean;
 };
 
 export type PricingCardParams = {
@@ -59,6 +60,7 @@ export default function PricingCard({ details, price, name, recommend = false }:
             const defaultParams = {
               key: JSON.stringify(detail),
               fontSize: recommend ? "lg" : "sm",
+              fontWeight: detail.bold ? "bold" : "unset",
             };
             if (detail.type === "info")
               return (
