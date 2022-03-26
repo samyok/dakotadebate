@@ -5,7 +5,6 @@ import {
   chakra,
   CloseButton,
   Flex,
-  Heading,
   HStack,
   IconButton,
   Link,
@@ -16,6 +15,7 @@ import {
 import { AiOutlineMenu } from "react-icons/ai";
 import Logo from "./Logo";
 import trackEvent from "./trackEvent";
+
 const TRANSITION_DURATION = "550ms";
 
 function MenuLink({ children, onClick, ...props }: any) {
@@ -96,6 +96,8 @@ export default function Navigation({ animateScroll = true, navRef }: NavigationP
                 size="sm"
                 transitionDuration={TRANSITION_DURATION}
                 opacity={scrolledState ? 1 : 0}
+                as={"a"}
+                href={"/register"}
               >
                 Register
               </Button>

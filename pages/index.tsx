@@ -100,8 +100,9 @@ export default function Home() {
                 <Button
                   leftIcon={<AiOutlineArrowRight />}
                   colorScheme={"purple"}
-                  href={"#staff"}
+                  href={"/staff"}
                   variant={"link"}
+                  as={"a"}
                 >
                   Our staff
                 </Button>
@@ -157,7 +158,7 @@ export default function Home() {
               </Text>
               <HStack spacing={4} wrap={"wrap"}>
                 <IconSocialLink icon={<AiOutlineTwitter />} href={"https://twitter.com/debatedakota"} />
-                <IconSocialLink icon={<AiOutlineInstagram />} href={"https://instagram.com/debatedakota"} />
+                <IconSocialLink icon={<AiOutlineInstagram />} href={"https://instagram.com/dakotadebate"} />
                 <IconSocialLink icon={<AiOutlineFacebook />} href={"https://facebook.com/debatedakota"} />
               </HStack>
             </PurpleCard>

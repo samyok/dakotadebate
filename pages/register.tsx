@@ -1,5 +1,5 @@
 import { Layout } from "../components/Layout";
-import { Box, IconButton } from "@chakra-ui/react";
+import { Box, IconButton, Text } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.sass";
@@ -8,7 +8,6 @@ import ContactUs from "../components/ContactUsForm";
 import SectionHeading from "../components/SectionHeading";
 import NextLink from "next/link";
 import BlackBanner from "../components/BlackBanner";
-import OurStaff from "../components/staff";
 
 type opts = {};
 
@@ -58,6 +57,7 @@ export default function Staff() {
         <Navigation navRef={navRef} animateScroll={false} />
         <Layout>
           <SectionHeading>Camp Registration</SectionHeading>
+          <Text textAlign={"center"}>Registration is due by May 1!</Text>
           <Box
             style={{
               position: "relative",

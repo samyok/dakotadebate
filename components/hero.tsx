@@ -5,6 +5,7 @@ import trackEvent from "./trackEvent";
 import backgroundImage from "../assets/2021-final-round.png";
 import { use100vh } from "react-div-100vh";
 import { polyfill } from "seamless-scroll-polyfill";
+import { useRouter } from "next/router";
 
 type HeroParams = {
   navRef: any;
@@ -73,7 +74,7 @@ export default function Hero({ navRef }: HeroParams) {
           </Text>
         </VStack>
         <VStack>
-          <Button variant={"solid"} size={"lg"} colorScheme={"purple"}>
+          <Button variant={"solid"} size={"lg"} colorScheme={"purple"} as={"a"} href={"/register"}>
             Register by May 1!
           </Button>
           <Text fontSize={"xl"} fontWeight={"300"} mt={4}>
