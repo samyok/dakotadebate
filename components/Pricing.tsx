@@ -1,9 +1,9 @@
 import { Layout } from "./Layout";
 import SectionHeading from "./SectionHeading";
-import { Flex, Text } from "@chakra-ui/react";
+import { Box, Collapse, Flex, ScaleFade, Text } from "@chakra-ui/react";
 import PricingCard, { PricingCardParams } from "./PricingCard";
-import React from "react";
-const data: { [key: string]: PricingCardParams } = {
+import React, { useState } from "react";
+const data: { [key: string]: Partial<PricingCardParams> } = {
   inPerson: {
     name: "In Person",
     price: 550,
@@ -104,20 +104,57 @@ const data: { [key: string]: PricingCardParams } = {
 };
 
 export default function Pricing() {
+  const [isRegistering, setIsRegistering] = useState(false);
   return (
     <Layout py={8}>
-      <SectionHeading>Pricing</SectionHeading>
+      <SectionHeading>Camp Registration</SectionHeading>
       <Text fontSize={"2xl"} textAlign={"center"}>
         Most debate camps cost thousands (plural!) of dollars, which make them prohibitively expensive for
         most families.
         <br />
         Our goal is to <b>make debate more accessible.</b>
       </Text>
-      <Flex justifyContent={"center"} py={6} alignItems={"center"} flexWrap={"wrap"}>
-        <PricingCard {...data.commuter} />
-        <PricingCard {...data.inPerson} />
-        <PricingCard {...data.free} />
-      </Flex>
+      <Collapse in={!isRegistering}>
+        <ScaleFade initialScale={0.5} in={!isRegistering}>
+          <Flex justifyContent={"center"} py={6} alignItems={"center"} flexWrap={"wrap"}>
+            <PricingCard onClick={() => setIsRegistering(true)} {...data.commuter} />
+            <PricingCard onClick={() => setIsRegistering(true)} {...data.inPerson} />
+            <PricingCard onClick={() => setIsRegistering(true)} {...data.free} />
+          </Flex>
+        </ScaleFade>
+      </Collapse>
+      <Collapse in={isRegistering}>
+        <Text textAlign={"center"} mt={5}>
+          Registration is due by May 1!
+        </Text>
+        <Box
+          style={{
+            position: "relative",
+            overflow: "hidden",
+            width: "100%",
+            height: "866px",
+            paddingTop: "866px",
+          }}
+        >
+          <iframe
+            title="Donation form powered by Simplyk"
+            style={{
+              position: "absolute",
+              border: 0,
+              top: 0,
+              left: 0,
+              bottom: 0,
+              right: 0,
+              width: "100%",
+              height: "100%",
+            }}
+            src="https://app.simplyk.io/en/embed/ticketing/d3eabe22-7fc0-43c9-8935-21dea1d20ae7"
+            // @ts-ignore
+            allowpaymentrequest
+            allowTransparency
+          />
+        </Box>
+      </Collapse>
     </Layout>
   );
 }

@@ -8,13 +8,14 @@ export type ListItem = {
 };
 
 export type PricingCardParams = {
-  price: number;
-  name: string;
+  price?: number;
+  name?: string;
   recommend?: boolean;
-  details: ListItem[];
+  details?: ListItem[];
+  onClick?: () => void;
 };
 
-export default function PricingCard({ details, price, name, recommend = false }: PricingCardParams) {
+export default function PricingCard({ details, price, name, recommend = false, onClick }: PricingCardParams) {
   const padding = recommend ? 6 : 3;
   return (
     <Box
@@ -56,7 +57,7 @@ export default function PricingCard({ details, price, name, recommend = false }:
 
       <Box bg={"gray.50"} px={8} py={padding + 4}>
         <List spacing={3}>
-          {details.map((detail) => {
+          {details?.map((detail) => {
             const defaultParams = {
               key: JSON.stringify(detail),
               fontSize: recommend ? "lg" : "sm",
@@ -87,7 +88,13 @@ export default function PricingCard({ details, price, name, recommend = false }:
           })}
         </List>
 
-        <Button variant={recommend ? "solid" : "outline"} mt={10} w={"full"} colorScheme={"purple"}>
+        <Button
+          onClick={onClick}
+          variant={recommend ? "solid" : "outline"}
+          mt={10}
+          w={"full"}
+          colorScheme={"purple"}
+        >
           Register
         </Button>
       </Box>

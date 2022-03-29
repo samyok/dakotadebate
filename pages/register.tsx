@@ -8,6 +8,7 @@ import ContactUs from "../components/ContactUsForm";
 import SectionHeading from "../components/SectionHeading";
 import NextLink from "next/link";
 import BlackBanner from "../components/BlackBanner";
+import Pricing from "../components/Pricing";
 
 type opts = {};
 
@@ -55,37 +56,7 @@ export default function Staff() {
       </Head>
       <main className={styles.main}>
         <Navigation navRef={navRef} animateScroll={false} />
-        <Layout>
-          <SectionHeading>Camp Registration</SectionHeading>
-          <Text textAlign={"center"}>Registration is due by May 1!</Text>
-          <Box
-            style={{
-              position: "relative",
-              overflow: "hidden",
-              width: "100%",
-              height: "866px",
-              paddingTop: "866px",
-            }}
-          >
-            <iframe
-              title="Donation form powered by Simplyk"
-              style={{
-                position: "absolute",
-                border: 0,
-                top: 0,
-                left: 0,
-                bottom: 0,
-                right: 0,
-                width: "100%",
-                height: "100%",
-              }}
-              src="https://app.simplyk.io/en/embed/ticketing/d3eabe22-7fc0-43c9-8935-21dea1d20ae7"
-              // @ts-ignore
-              allowpaymentrequest
-              allowTransparency
-            />
-          </Box>
-        </Layout>
+        <Pricing />
         <BlackBanner />
         <ContactUs />
       </main>

@@ -1,8 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
+import { useRouter } from "next/router";
+import { userInfo } from "os";
+import requestIp from "request-ip";
 
 const PUBLIC_FILE = /\.(.*)$/;
 const SEGMENT_PAGE_ENDPOINT = "https://api.segment.io/v1/page";
 const SEGMENT_TRACK_ENDPOINT = "https://api.segment.io/v1/track";
+const SEGMENT_IDENTIFY_ENDPOINT = "https://api.segment.io/v1/identify";
 
 function uuidv4() {
   // @ts-ignore
@@ -43,6 +47,28 @@ const logEvent = (userId: string, event: string) => {
   });
 };
 
+const identifyUser = (userId: string, req: NextRequest) => {
+  console.log("IP: ", req.ip);
+
+  const traits = Object.fromEntries(req.nextUrl.searchParams.entries());
+  fetch(SEGMENT_IDENTIFY_ENDPOINT, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      anonymousId: userId,
+      writeKey: process.env.SEGMENT_WRITE_KEY,
+      context: {
+        ip: requestIp.getClientIp(req),
+      },
+      traits,
+    }),
+    method: "POST",
+  }).catch((error) => {
+    console.log("An error happened trying to reach Segment:", error);
+  });
+};
+
 export function middleware(req: NextRequest) {
   const response = NextResponse.next();
 
@@ -55,33 +81,30 @@ export function middleware(req: NextRequest) {
 
   const isAPIRequest =
     !PUBLIC_FILE.test(req.nextUrl.pathname) &&
-    req.nextUrl.pathname.startsWith("/api/track") &&
+    req.nextUrl.pathname.startsWith("/api/") &&
     !req.headers.get("x-middleware-preflight");
 
-  if (isPageRequest) {
-    // if it's a first time user, we'll add cookie to identify it in subsequent requests
-    const userId = req.cookies["userId"] || uuidv4();
+  // if it's a first time user, we'll add cookie to identify it in subsequent requests
+  const userId = req.cookies["userId"] || uuidv4();
 
+  if (isPageRequest || isAPIRequest) {
     // setting a cookie to identify the user on future requests
     if (!req.cookies["userId"]) {
       response.cookie("userId", userId);
     }
-
-    console.log(`User ${userId} is visiting ${req.nextUrl.pathname}`);
-    // non blocking call to let the middleware finish quickly
-    logView(userId, req.nextUrl.pathname);
-  } else if (isAPIRequest) {
-    // if it's a first time user, we'll add cookie to identify it in subsequent requests
-    const userId = req.cookies["userId"] || uuidv4();
-
-    // setting a cookie to identify the user on future requests
-    if (!req.cookies["userId"]) {
-      response.cookie("userId", userId);
-    }
-
-    console.log(`User ${userId} EVENT ${req.nextUrl.searchParams.get("event")}`);
-    // non blocking call to let the middleware finish quickly
-    logEvent(userId, req.nextUrl.searchParams.get("event") || "unknown event");
+    // identify user
+    identifyUser(userId, req);
   }
+
+  if (isPageRequest) {
+    console.log(`User ${userId} is visiting ${req.nextUrl.pathname}`);
+    logView(userId, req.nextUrl.pathname.replace(/\//g, ":"));
+  }
+
+  if (isAPIRequest && req.nextUrl.searchParams.get("e")) {
+    console.log(`User ${userId} EVENT ${req.nextUrl.searchParams.get("e")}`);
+    logEvent(userId, req.nextUrl.searchParams.get("e") || "unknown event");
+  }
+
   return response;
 }

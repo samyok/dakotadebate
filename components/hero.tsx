@@ -74,7 +74,7 @@ export default function Hero({ navRef }: HeroParams) {
           </Text>
         </VStack>
         <VStack>
-          <Button variant={"solid"} size={"lg"} colorScheme={"purple"} as={"a"} href={"/register"}>
+          <Button variant={"solid"} size={"lg"} colorScheme={"purple"} as={"a"} href={"#pricing"}>
             Register by May 1!
           </Button>
           <Text fontSize={"xl"} fontWeight={"300"} mt={4}>

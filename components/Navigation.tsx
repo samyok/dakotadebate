@@ -47,7 +47,7 @@ const MenuLinks = () => (
   <>
     <MenuLink href={"/#what-is-ddi"}>Info</MenuLink>
     <MenuLink href={"/staff"}>Staff</MenuLink>
-    <MenuLink href={"/#pricing"}>Cost</MenuLink>
+    <MenuLink href={"/register"}>Cost</MenuLink>
     <MenuLink href={"/#scholarships"}>Scholarships</MenuLink>
   </>
 );
