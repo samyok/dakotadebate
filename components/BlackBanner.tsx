@@ -2,6 +2,7 @@ import { Box, Button, chakra, Heading, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import backgroundImage from "../assets/scholarship_background.png";
 import React from "react";
+import trackEvent from "./trackEvent";
 
 export default function BlackBanner() {
   return (
@@ -38,7 +39,14 @@ export default function BlackBanner() {
           </Text>
         </VStack>
         <VStack>
-          <Button variant={"solid"} size={"lg"} colorScheme={"purple"}>
+          <Button
+            href={"/scholarships"}
+            as={"a"}
+            onClick={() => trackEvent("Scholarships Banner: Click")}
+            variant={"solid"}
+            size={"lg"}
+            colorScheme={"purple"}
+          >
             Apply for Scholarships
           </Button>
           <Text fontSize={"xl"} fontWeight={"300"} mt={4}>

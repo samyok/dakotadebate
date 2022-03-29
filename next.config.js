@@ -11,8 +11,8 @@ module.exports = {
         permanent: false,
       },
       {
-        source: "/scholarships",
-        destination: "https://forms.gle/RK7WppSmTnAR6qxz8",
+        source: "/smile",
+        destination: "https://smile.amazon.com/ch/87-3383622",
         permanent: false,
       },
     ];

@@ -60,12 +60,14 @@ export default function PurpleCard({ title, icon, children, ...props }: any): JS
       mr={{ base: 0, sm: 5 }}
       {...props}
     >
-      <Flex mb={4} alignItems={"center"} justifyContent={"space-between"}>
-        <Heading color={"purple.800"} fontWeight={600} size={"lg"} mb={1}>
-          {title}
-        </Heading>
-        {icon}
-      </Flex>
+      {title && (
+        <Flex mb={4} alignItems={"center"} justifyContent={"space-between"}>
+          <Heading color={"purple.800"} fontWeight={600} size={"lg"} mb={1}>
+            {title}
+          </Heading>
+          {icon}
+        </Flex>
+      )}
       {children}
     </Flex>
   );

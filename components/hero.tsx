@@ -36,7 +36,7 @@ export default function Hero({ navRef }: HeroParams) {
   return (
     <Box
       width={"full"}
-      height={height ? `${height}px` : "10vh"}
+      height={height ? `${height}px` : "100vh"}
       transitionDuration={"1000ms"}
       mb={`-${navHeight}px`}
       bg={"blackAlpha.900"}
