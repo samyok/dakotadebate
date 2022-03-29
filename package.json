@@ -42,6 +42,7 @@
     "@types/nodemailer": "^6.4.2",
     "@types/phone": "^2.4.1",
     "@types/react": "17.0.11",
+    "@types/request-ip": "^0.0.37",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
     "@typescript-eslint/parser": "^5.15.0",
     "eslint": "^8.11.0",
