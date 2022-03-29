@@ -58,7 +58,10 @@ const identifyUser = (userId: string, req: NextRequest) => {
       context: {
         ip: req.ip,
       },
-      traits,
+      traits: {
+        ...traits,
+        ip: req.ip,
+      },
     }),
     method: "POST",
   }).catch((error) => {
