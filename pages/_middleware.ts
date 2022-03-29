@@ -46,8 +46,8 @@ const logEvent = (userId: string, event: string) => {
 
 const identifyUser = (userId: string, req: NextRequest) => {
   console.log("IP: ", req.ip);
-
-  const traits = Object.fromEntries(req.nextUrl.searchParams.entries());
+  let traits = Object.fromEntries(req.nextUrl.searchParams.entries());
+  if (req.nextUrl.searchParams.get("e")) traits = {};
   fetch(SEGMENT_IDENTIFY_ENDPOINT, {
     headers: {
       "Content-Type": "application/json",
