@@ -60,7 +60,7 @@ const identifyUser = (userId: string, req: NextRequest) => {
       },
       traits: {
         ...traits,
-        ip: req.ip,
+        user_ip: req.ip,
       },
     }),
     method: "POST",
