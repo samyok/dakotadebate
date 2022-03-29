@@ -23,7 +23,7 @@ const staffdata = [
     name: "Aditya Tummala",
     image: "/people/Aditya.jpg",
     bio: `Hello!
-        I’m graduating from Brookings High School and will be attending Harvard in the fall.
+        I’m graduating from Brookings High School and will be attending Harvard University in the fall.
         I compete in Public Forum debate and International Extemporaneous Speaking. I am a 2-time National Qualifier, State Champion in Extemp, and national elimination round qualifier; and I’m very enthusiastic about inspiring others to love debate as much as I do!
         Outside of debate, I love fishing, playing soccer and tennis, cooking/eating, and hanging out with the others in the debate community!`,
   },
