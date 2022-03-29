@@ -65,6 +65,10 @@ export default function Staff() {
         <Layout>
           <SectionHeading>Our Staff</SectionHeading>
           <Text>{description_meta}</Text>
+          <Text mt={4}>
+            All current and former staff are listed below! At the in-person camp, we'll also have SDSU staff
+            on-site for safety.
+          </Text>
         </Layout>
         <Layout>
           <OurStaff />

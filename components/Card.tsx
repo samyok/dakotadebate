@@ -48,6 +48,7 @@ export default function Card({ radius, image, children, title, width }: props) {
           font-weight: 400;
           margin: 0 30px;
           font-size: 18px;
+          flex-grow: 1;
         }
 
         .image {

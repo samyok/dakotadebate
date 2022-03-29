@@ -47,14 +47,14 @@ const staffdata = [
   },
   {
     name: "Sam Markley",
-    image: "/people/Sam.jpg",
+    image: "/people/Sam.jpg?new",
     bio: `Hey everyone!
         I'm just finishing my senior year at Washington High School in Sioux Falls. I've competed in Lincoln Douglas since I started debate and broke to elimination rounds last year at nationals. 
         Debate has helped me find my voice and become more confident as a speaker, all while being a ton of fun! I can't wait to introduce debaters to this amazing activity and community!`,
   },
   {
     name: "Samyok Nepal",
-    image: "/people/samyok.png",
+    image: "/people/samyok.jpeg",
     bio: `Hello! I graduated from Brookings High School last year and will be attending the University of Minnesota after a gap year. 
         I do all the coding for this site, the discord, and various other things.
         As for Debate, I qualified to the National Tournament my sophomore year and helped with the Brookings High School Online Debate Camp last year. 
