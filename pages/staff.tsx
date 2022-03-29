@@ -53,12 +53,12 @@ export default function Staff() {
         <meta property="og:url" content="https://dakotadebate.org/" />
         <meta property="og:title" content="Dakota Debate Institute" />
         <meta property="og:description" content={description_meta} />
-        <meta property="og:image" content="https://dakotadebate.org/ddi-full.png" />
+        <meta property="og:image" content="https://dakotadebate.org/og_image.png" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://dakotadebate.org/" />
         <meta property="twitter:title" content="Dakota Debate Institute" />
         <meta property="twitter:description" content={description_meta} />
-        <meta property="twitter:image" content="https://dakotadebate.org/ddi-full.png" />
+        <meta property="twitter:image" content="https://dakotadebate.org/og_image.png" />
       </Head>
       <main className={styles.main}>
         <Navigation navRef={navRef} animateScroll={false} />
