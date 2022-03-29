@@ -109,8 +109,7 @@ export default function Pricing() {
     <Layout py={8}>
       <SectionHeading>Camp Registration</SectionHeading>
       <Text fontSize={"2xl"} textAlign={"center"}>
-        Most debate camps cost thousands (plural!) of dollars, which make them prohibitively expensive for
-        most families.
+        Most debate camps cost thousands (plural!) of dollars, which make them out of reach for most families.
         <br />
         Our goal is to <b>make debate more accessible.</b>
       </Text>

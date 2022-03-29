@@ -70,7 +70,7 @@ export default function Testimonials() {
             </LightText>
             <LightText last>
               I can <Sb>honestly attribute</Sb> my decent sophomore season (quarterfinals at state, National
-              qualifier, and finals at Harrisburg) to the extra tools that DDI lent me.
+              qualifier, and finals at Harrisburg) to the <Sb>extra tools</Sb> that DDI lent me.
             </LightText>
           </Box>
           <Box>

@@ -19,6 +19,10 @@ export default function PricingCard({ details, price, name, recommend = false, o
   const padding = recommend ? 6 : 3;
   return (
     <Box
+      order={{
+        base: recommend ? -1 : 0,
+        xl: 0,
+      }}
       zIndex={recommend ? 1 : 0}
       mx={recommend ? -4 : 0}
       my={8}

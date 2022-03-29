@@ -111,7 +111,7 @@ export default function Home() {
             <PurpleCard title={"Accessibility."} icon={SVGs.money}>
               <Text fontSize={"md"} mb={4} flexGrow={1}>
                 Most debate camps cost thousands of dollars. We are a{" "}
-                <Link href="/support" isExternal color={"purple.300"}>
+                <Link href="/support" isExternal color={"purple.600"}>
                   501(c)(3) public charity
                 </Link>{" "}
                 dedicated to providing accessible debate education. Our camp is <b>tuition-free</b> (all costs
@@ -152,9 +152,9 @@ export default function Home() {
             </PurpleCard>
             <PurpleCard title={"Community."} icon={SVGs.tree}>
               <Text fontSize={"md"} mb={4} flexGrow={1}>
-                Fostering a lasting, supportive debate community is core to DDI. In addition to our debate
-                curriculum, students participate in daily game nights and other activities to have fun outside
-                of their speech and debate teams. Connect with us on our socials!
+                Fostering a <b>lasting, supportive debate community</b> is core to DDI. In addition to our
+                debate curriculum, students participate in daily game nights and other activities to have fun
+                outside of their speech and debate teams. Connect with us on our socials!
               </Text>
               <HStack spacing={4} wrap={"wrap"}>
                 <IconSocialLink icon={<AiOutlineTwitter />} href={"https://twitter.com/debatedakota"} />
