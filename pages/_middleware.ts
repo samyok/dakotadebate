@@ -1,7 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { useRouter } from "next/router";
-import { userInfo } from "os";
-import requestIp from "request-ip";
 
 const PUBLIC_FILE = /\.(.*)$/;
 const SEGMENT_PAGE_ENDPOINT = "https://api.segment.io/v1/page";
@@ -59,7 +56,7 @@ const identifyUser = (userId: string, req: NextRequest) => {
       anonymousId: userId,
       writeKey: process.env.SEGMENT_WRITE_KEY,
       context: {
-        ip: requestIp.getClientIp(req),
+        ip: req.ip,
       },
       traits,
     }),
