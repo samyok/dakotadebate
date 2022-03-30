@@ -134,10 +134,11 @@ export default function Navigation({ animateScroll = true, navRef }: NavigationP
               >
                 <CloseButton aria-label="Close menu" />
                 <MenuLinks />
-                <MenuLink>Login</MenuLink>
                 <Button
                   colorScheme="purple"
                   size="sm"
+                  as={"a"}
+                  href={"/register"}
                   transitionDuration={TRANSITION_DURATION}
                   opacity={scrolledState ? 1 : 0}
                 >
