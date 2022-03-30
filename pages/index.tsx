@@ -13,6 +13,7 @@ import NextLink from "next/link";
 import Testimonials from "../components/Testimonials";
 import BlackBanner from "../components/BlackBanner";
 import Pricing from "../components/Pricing";
+import trackEvent from "../components/trackEvent";
 
 const description_meta =
   "Summer debate camps often cost thousands of dollars. DDI is different. With a camp run by" +
@@ -119,13 +120,21 @@ export default function Home() {
                 <b>100% of financial need</b>.
               </Text>
               <HStack spacing={4} wrap={"wrap"}>
-                <Button colorScheme={"purple"} href={"#staff"} variant={"solid"}>
+                <Button
+                  as={"a"}
+                  href={"/scholarships"}
+                  onClick={() => trackEvent("CardClick: Scholarships")}
+                  colorScheme={"purple"}
+                  variant={"solid"}
+                >
                   Apply for scholarships
                 </Button>
                 <Button
                   leftIcon={<AiOutlineArrowRight />}
                   colorScheme={"purple"}
-                  href={"#staff"}
+                  as={"a"}
+                  href={"/register"}
+                  onClick={() => trackEvent("CardClick: Camp Options")}
                   variant={"link"}
                 >
                   View camp options
@@ -139,16 +148,16 @@ export default function Home() {
                 <b>one-on-one</b> with staff and in small groups, attend lectures appropriate for their skill
                 level, and attend electives they’re interested in.
               </Text>
-              <HStack spacing={4} wrap={"wrap"}>
-                <Button
-                  colorScheme={"purple"}
-                  href={"#staff"}
-                  variant={"link"}
-                  leftIcon={<AiOutlineArrowRight />}
-                >
-                  Our plan
-                </Button>
-              </HStack>
+              {/* <HStack spacing={4} wrap={"wrap"}> */}
+              {/*   <Button */}
+              {/*     colorScheme={"purple"} */}
+              {/*     href={"#staff"} */}
+              {/*     variant={"link"} */}
+              {/*     leftIcon={<AiOutlineArrowRight />} */}
+              {/*   > */}
+              {/*     Our plan */}
+              {/*   </Button> */}
+              {/* </HStack> */}
             </PurpleCard>
             <PurpleCard title={"Community."} icon={SVGs.tree}>
               <Text fontSize={"md"} mb={4} flexGrow={1}>
