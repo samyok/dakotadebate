@@ -105,6 +105,13 @@ const data: { [key: string]: Partial<PricingCardParams> } = {
 
 export default function Pricing() {
   const [isRegistering, setIsRegistering] = useState(false);
+  const onClick = () => {
+    window.gtag("event", "conversion", {
+      send_to: "AW-10862125283/MKItCM-ajK4DEOPBu7so",
+      transaction_id: "",
+    });
+    setIsRegistering(true);
+  };
   return (
     <Layout py={8}>
       <SectionHeading>Camp Registration</SectionHeading>
@@ -116,9 +123,9 @@ export default function Pricing() {
       <Collapse in={!isRegistering}>
         <ScaleFade initialScale={0.5} in={!isRegistering}>
           <Flex justifyContent={"center"} py={6} alignItems={"center"} flexWrap={"wrap"}>
-            <PricingCard onClick={() => setIsRegistering(true)} {...data.commuter} />
-            <PricingCard onClick={() => setIsRegistering(true)} {...data.inPerson} />
-            <PricingCard onClick={() => setIsRegistering(true)} {...data.free} />
+            <PricingCard onClick={onClick} {...data.commuter} />
+            <PricingCard onClick={onClick} {...data.inPerson} />
+            <PricingCard onClick={onClick} {...data.free} />
           </Flex>
         </ScaleFade>
       </Collapse>
