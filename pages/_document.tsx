@@ -44,7 +44,14 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <script async defer data-website-id="9581c235-7870-44ae-a4ff-665900654c78" src="/a.js" />
+          <script
+            async
+            defer
+            data-website-id="9581c235-7870-44ae-a4ff-665900654c78"
+            src="/a.js"
+            data-host-url="https://analytics.dakotadebate.org"
+            data-domains="dakotadebate.org"
+          />
           <script dangerouslySetInnerHTML={{ __html: amplitudeJS }} />
           <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10862125283" />
           <script dangerouslySetInnerHTML={{ __html: gtm }} />
