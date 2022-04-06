@@ -15,6 +15,11 @@ module.exports = {
         destination: "https://smile.amazon.com/ch/87-3383622",
         permanent: false,
       },
+      {
+        source: "/donate",
+        destination: "https://www.paypal.com/donate/?hosted_button_id=ZGXMTR233E6QN",
+        permanent: false,
+      },
     ];
   },
   eslint: {
