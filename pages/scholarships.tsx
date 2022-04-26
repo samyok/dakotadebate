@@ -38,7 +38,7 @@ export default function Staff() {
         <Navigation navRef={navRef} animateScroll={false} />
         <Layout>
           <SectionHeading>Scholarships</SectionHeading>
-          <Text textAlign={"center"}>Please apply by April 15.</Text>
+          <Text textAlign={"center"}>Please apply by May 1.</Text>
           <iframe
             style={{ marginTop: 28, marginBottom: 8 }}
             src="https://docs.google.com/forms/d/e/1FAIpQLSfqKVJbrOiG-jCaRtnYPEUq4w88nwiPTx1xkdPAsIRDkG2s2Q/viewform?embedded=true"

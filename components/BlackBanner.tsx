@@ -50,7 +50,7 @@ export default function BlackBanner() {
             Apply for Scholarships
           </Button>
           <Text fontSize={"xl"} fontWeight={"300"} mt={4}>
-            Available until April 15.
+            Available until May 1.
           </Text>
         </VStack>
       </VStack>
