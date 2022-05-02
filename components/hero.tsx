@@ -75,7 +75,7 @@ export default function Hero({ navRef }: HeroParams) {
         </VStack>
         <VStack>
           <Button variant={"solid"} size={"lg"} colorScheme={"purple"} as={"a"} href={"#pricing"}>
-            Register by May 1!
+            Register by May 10!
           </Button>
           <Text fontSize={"xl"} fontWeight={"300"} mt={4}>
             June 25-30 @ SDSU
