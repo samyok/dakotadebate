@@ -131,7 +131,7 @@ export default function Pricing() {
       </Collapse>
       <Collapse in={isRegistering}>
         <Text textAlign={"center"} mt={5}>
-          Registration is due by May 10!
+          Registration is due by May 8!
         </Text>
         <Box
           style={{
