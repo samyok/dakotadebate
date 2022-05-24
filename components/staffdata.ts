@@ -56,9 +56,17 @@ const staffdata = [
     name: "Samyok Nepal",
     image: "/people/samyok.jpeg",
     bio: `Hello! I graduated from Brookings High School last year and will be attending the University of Minnesota after a gap year. 
-        I do all the coding for this site, the discord, and various other things.
-        As for Debate, I qualified to the National Tournament my sophomore year and helped with the Brookings High School Online Debate Camp last year. 
+        I direct the camp and manage various logistics, fundraising, and legal work to make DDI happen.
+        As for Debate, I qualified to the National Tournament my sophomore year and have been involved with DDI since its inception. 
         I'm so excited to see what everyone learns this year!`,
+  },
+  {
+    name: "Tuba Ali",
+    image: "/people/Tuba.png",
+    bio: `Hello everyone!
+        I graduated from Harrisburg High School this year and will be going to the University of Minnesota in the fall. 
+        I am a four-year public forum debater and four-year original orator (National qualifier in PF and 3-time qualifier in oratory!) I was also PF state runner-up this year!
+        Debate has made me become more aware my surroundings which is what I hope to pass onto others. Other than debate, I enjoy singing, dancing, cooking, and painting!`
   },
   {
     name: "Srishti Kumari",
@@ -71,7 +79,7 @@ const staffdata = [
   {
     name: "Riley Nold",
     image: "/people/Riley.jpeg",
-    bio: `Hey y’all! I graduated from WHS in 2021 and I currently attend the University Alabama.
+    bio: `Hey y’all! I graduated from WHS in 2021 and I currently attend the University of Alabama.
         I debated Policy for three years and won a state championship.
         My senior year I transitioned to Public Forum where my partner Katherine and I qualified for the national tournament and were state finalists.
         Debate has provided me with valuable research and speaking skills, as well as a group of lifelong friends.
