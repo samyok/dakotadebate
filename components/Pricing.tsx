@@ -1,6 +1,6 @@
 import { Layout } from "./Layout";
 import SectionHeading from "./SectionHeading";
-import { Box, Collapse, Flex, ScaleFade, Text } from "@chakra-ui/react";
+import { Box, Collapse, Flex, Link, ScaleFade, Text } from "@chakra-ui/react";
 import PricingCard, { PricingCardParams } from "./PricingCard";
 import React, { useState } from "react";
 const data: { [key: string]: Partial<PricingCardParams> } = {
@@ -119,8 +119,16 @@ export default function Pricing() {
         Most debate camps cost thousands (plural!) of dollars, which make them out of reach for most families.
         <br />
         Our goal is to <b>make debate more accessible.</b>
+        <br/>
+        <br/>
+        Registration has closed for 2022, but sign up below to be notified when we open again for 2023.
       </Text>
-      <Collapse in={!isRegistering}>
+      <Box display={"flex"} justifyContent={"center"}>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdqLPbViVDpIawDLNmiF7uwOAqvrLQFXs1jxmtB9Sq0b2cNcw/viewform?embedded=true"
+          width="640" height="515" frameBorder="0" marginHeight={0} marginWidth={0}>Loading…</iframe>
+      </Box>
+      <Collapse in={false}>
         <ScaleFade initialScale={0.5} in={!isRegistering}>
           <Flex justifyContent={"center"} py={6} alignItems={"center"} flexWrap={"wrap"}>
             <PricingCard onClick={onClick} {...data.commuter} />
@@ -129,7 +137,7 @@ export default function Pricing() {
           </Flex>
         </ScaleFade>
       </Collapse>
-      <Collapse in={isRegistering}>
+      <Collapse in={false}>
         <Text textAlign={"center"} mt={5}>
           Registration is due by May 8!
         </Text>

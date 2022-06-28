@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { Box, Button, chakra, Heading, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, chakra, Heading, Link, Text, VStack } from "@chakra-ui/react";
 import trackEvent from "./trackEvent";
 import backgroundImage from "../assets/2021-final-round.png";
 import { use100vh } from "react-div-100vh";
 import { polyfill } from "seamless-scroll-polyfill";
-import { useRouter } from "next/router";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 type HeroParams = {
   navRef: any;
@@ -75,11 +75,11 @@ export default function Hero({ navRef }: HeroParams) {
         </VStack>
         <VStack>
           <Button variant={"solid"} size={"lg"} colorScheme={"purple"} as={"a"} href={"#pricing"}>
-            Register by May 8!
+            Join our mailing list!
           </Button>
-          <Text fontSize={"xl"} fontWeight={"300"} mt={4}>
-            June 25-30 @ SDSU
-          </Text>
+          <Link href="/apply" isExternal my={2}>
+            Join our staff! <ExternalLinkIcon mx="2px" mb={1} />
+          </Link>
         </VStack>
       </VStack>
       <chakra.svg
@@ -94,7 +94,7 @@ export default function Hero({ navRef }: HeroParams) {
         cursor={"pointer"}
         opacity={0.65}
         _hover={{
-          opacity: 1,
+          opacity: 1
         }}
         pos={"absolute"}
         bottom={4}

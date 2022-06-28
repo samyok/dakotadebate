@@ -36,18 +36,9 @@ export default function Staff() {
       </Head>
       <main className={styles.main}>
         <Navigation navRef={navRef} animateScroll={false} />
-        <Layout>
+        <Layout minH={"50vh"} py={10}>
           <SectionHeading>Scholarships</SectionHeading>
-          <Text textAlign={"center"}>Please apply by May 8.</Text>
-          <iframe
-            style={{ marginTop: 28, marginBottom: 8 }}
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfqKVJbrOiG-jCaRtnYPEUq4w88nwiPTx1xkdPAsIRDkG2s2Q/viewform?embedded=true"
-            width="100%"
-            height="1768"
-            frameBorder="0"
-          >
-            Loading…
-          </iframe>
+          <Text textAlign={"center"}>Scholarships will open again when registration is open for next year.</Text>
         </Layout>
         <ContactUs />
       </main>
