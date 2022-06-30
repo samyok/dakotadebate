@@ -20,6 +20,10 @@ module.exports = {
         destination: "https://www.paypal.com/donate/?hosted_button_id=ZGXMTR233E6QN",
         permanent: false,
       },
+      {
+        source: "/survey",
+        destination: "https://docs.google.com/forms/d/e/1FAIpQLSeJogNzPSpimlJuSadymjE0kzz-oKOVYrtWEVWXnmH4Hfwe0A/formResponse",
+        permanent: false
     ];
   },
   eslint: {
