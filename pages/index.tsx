@@ -1,23 +1,21 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.sass";
 import React, { useRef } from "react";
+import { Button, chakra, Flex, HStack, IconButton, Link, Text } from "@chakra-ui/react";
+import { AiOutlineArrowRight, AiOutlineFacebook, AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
+import NextLink from "next/link";
+import styles from "../styles/Home.module.sass";
 import Hero from "../components/hero";
 import Navigation from "../components/Navigation";
 import ContactUs from "../components/ContactUsForm";
 import { Layout } from "../components/Layout";
-import { Button, chakra, Flex, HStack, IconButton, Link, Text } from "@chakra-ui/react";
 import SectionHeading from "../components/SectionHeading";
 import PurpleCard, { SVGs } from "../components/PurpleCard";
-import { AiOutlineArrowRight, AiOutlineFacebook, AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
-import NextLink from "next/link";
 import Testimonials from "../components/Testimonials";
-import BlackBanner from "../components/BlackBanner";
 import Pricing from "../components/Pricing";
-import trackEvent from "../components/trackEvent";
 
-const description_meta =
-  "Summer debate camps often cost thousands of dollars. DDI is different. With a camp run by" +
-  " volunteers, DDI aims to empower EVERY aspiring student. Because our team is run entirely by current and former" +
+const metaDescription =
+  "Summer speech and debate camps often cost thousands of dollars. DDI is different. With a camp run by" +
+  " volunteers, DDI aims to empower EVERY aspiring student. Because our team is run by current and former" +
   " debaters, we bring you the tactics that are relevant to the evolving South Dakota debate field.";
 
 function IconSocialLink({ icon, href }: any): JSX.Element {
@@ -43,20 +41,20 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Dakota Debate Institute</title>
-        <meta name="description" content={description_meta} />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name={"description"} content={metaDescription} />
+        <link rel={"icon"} href={"/favicon.ico"} />
         <title>Dakota Debate Institute</title>
-        <meta name="title" content="Dakota Debate Institute" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dakotadebate.org/" />
-        <meta property="og:title" content="Dakota Debate Institute" />
-        <meta property="og:description" content={description_meta} />
-        <meta property="og:image" content="https://dakotadebate.org/og_image.png" />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://dakotadebate.org/" />
-        <meta property="twitter:title" content="Dakota Debate Institute" />
-        <meta property="twitter:description" content={description_meta} />
-        <meta property="twitter:image" content="https://dakotadebate.org/og_image.png" />
+        <meta name={"title"} content={"Dakota Debate Institute"} />
+        <meta property={"og:type"} content={"website"} />
+        <meta property={"og:url"} content={"https://dakotadebate.org/"} />
+        <meta property={"og:title"} content={"Dakota Debate Institute"} />
+        <meta property={"og:description"} content={metaDescription} />
+        <meta property={"og:image"} content={"https://dakotadebate.org/og_image.png"} />
+        <meta property={"twitter:card"} content={"summary_large_image"} />
+        <meta property={"twitter:url"} content={"https://dakotadebate.org/"} />
+        <meta property={"twitter:title"} content={"Dakota Debate Institute"} />
+        <meta property={"twitter:description"} content={metaDescription} />
+        <meta property={"twitter:image"} content={"https://dakotadebate.org/og_image.png"} />
       </Head>
       <main className={styles.main}>
         <Hero navRef={navRef} />
@@ -66,10 +64,10 @@ export default function Home() {
           <SectionHeading>What is DDI?</SectionHeading>
           <Flex justifyContent={"space-evenly"} alignItems={"center"}>
             <Text width={{ base: "100%", lg: "50%" }} flexGrow={1}>
-              DDI is the <b>only</b> debate camp teaching Public Forum and Lincoln-Douglas debate in South
-              Dakota. Over 6 days, students with <b>any level of experience</b> will work closely with
-              qualified staff to learn how to effectively argue, research, and communicate. This year, we are
-              hosting camp <b>in person at South Dakota State University</b> from <b>June 25-30</b>.
+              DDI is the <b>only</b> debate camp teaching high school speech and debate in South Dakota. Over
+              6 days, students with <b>any level of experience</b> will work closely with qualified staff to
+              learn how to effectively argue, research, and communicate. This year, Jackrabbit Forensics is
+              hosting camp <b>in person at South Dakota State University</b> from <b>July 9-14</b>.
             </Text>
             <Flex display={{ base: "none", lg: "flex" }}>
               <chakra.img mx={8} width={"210px"} src={"/bison_logo.png"} alt={""} />
@@ -89,57 +87,41 @@ export default function Home() {
           <Flex flexWrap={"wrap"} justifyContent={"space-around"}>
             <PurpleCard title={"Qualified Staff."} icon={SVGs.staff}>
               <Text fontSize={"md"} mb={2}>
-                Our volunteer staff includes a <b>2nd-place national finalist</b> in Lincoln-Douglas,{" "}
-                <b>six state champions</b>, and a <b>Tournament of Champions</b> qualifier. All of our staff
-                has graduated within the past two years, so we’re familiar with the South Dakota debate
-                circuit.
+                In the past, our volunteer staff has included a <b>2nd-place national finalist</b> in
+                Lincoln-Douglas, <b>eight state champions</b>, and multiple <b>Tournament of Champions</b>{" "}
+                qualifiers. All of our staff has graduated from the South Dakotan Debate Circuit, so we know
+                what it takes to win.
               </Text>
               <Text fontSize={"md"} flexGrow={1}>
-                We will also have SDSU staff and coaches at the in-person camp.
+                We will also have SDSU staff and coaches at the in-person camp, at a student-to-staff ratio of
+                4:1.
               </Text>
-              <HStack>
+              <HStack mt={2}>
                 <Button
                   leftIcon={<AiOutlineArrowRight />}
                   colorScheme={"purple"}
                   href={"/staff"}
                   variant={"link"}
-                  as={"a"}
-                >
+                  as={"a"}>
                   Our staff
                 </Button>
               </HStack>
             </PurpleCard>
             <PurpleCard title={"Accessibility."} icon={SVGs.money}>
               <Text fontSize={"md"} mb={4} flexGrow={1}>
-                Most debate camps cost thousands of dollars. We are a{" "}
-                <Link href="/support" isExternal color={"purple.600"}>
-                  501(c)(3) public charity
-                </Link>{" "}
-                dedicated to providing accessible debate education. Our camp is <b>tuition-free</b> (all costs
-                go to in-person accommodations). If you need financial assistance, it is our goal to meet{" "}
-                <b>100% of financial need</b>.
+                This year, DDI is run by Jackrabbit Forensics.
+                <b> We are committed to making DDI accessible to everyone</b>. If you need financial
+                assistance, please email Andrea at{" "}
+                <Link
+                  style={{
+                    textDecoration: "underline",
+                  }}
+                  color={"purple.500"}
+                  href={"mailto:andrea.carlile@sdstate.edu"}>
+                  andrea.carlile@sdstate.edu
+                </Link>
+                .
               </Text>
-              <HStack spacing={4} wrap={"wrap"}>
-                <Button
-                  as={"a"}
-                  href={"/scholarships"}
-                  onClick={() => trackEvent("CardClick: Scholarships")}
-                  colorScheme={"purple"}
-                  variant={"solid"}
-                >
-                  Apply for scholarships
-                </Button>
-                <Button
-                  leftIcon={<AiOutlineArrowRight />}
-                  colorScheme={"purple"}
-                  as={"a"}
-                  href={"/register"}
-                  onClick={() => trackEvent("CardClick: Camp Options")}
-                  variant={"link"}
-                >
-                  View camp options
-                </Button>
-              </HStack>
             </PurpleCard>
             <PurpleCard title={"Curriculum."} icon={SVGs.books}>
               <Text fontSize={"md"} mb={4} flexGrow={1}>
@@ -180,7 +162,6 @@ export default function Home() {
         <div id={"pricing"} />
         <Pricing />
         <div id={"scholarships"} />
-        <BlackBanner />
         <ContactUs />
       </main>
     </div>

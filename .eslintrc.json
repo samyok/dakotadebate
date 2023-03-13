@@ -19,7 +19,10 @@
   },
   "overrides": [
     {
-      "files": ["services/frontend/**/__mocks__/**", "services/frontend/**/test-utils.*", "services/frontend/**/*.test.{j,t}s?(x)"],
+      "files": [
+        "packages/frontend/**/test-utils.js",
+        "packages/frontend/**/*.test.{j,t}s?(x)"
+      ],
       "env": {
         "jest": true
       },
@@ -33,18 +36,23 @@
       ],
       "rules": {
         "max-lines": "off",
-        "max-lines-per-function": "off",
-        "import/no-extraneous-dependencies": "off"
+        "max-lines-per-function": "off"
       }
     },
     {
-      "files": ["services/backend/**/*", "services/common/**/*", "services/io/**/*"],
+      "files": [
+        "packages/backend/**/*",
+        "packages/io/**/*"
+      ],
       "rules": {
         "@next/next/no-html-link-for-pages": "off"
       }
     },
     {
-      "files": ["*.js", "*.jsx"],
+      "files": [
+        "*.js",
+        "*.jsx"
+      ],
       "rules": {
         "@typescript-eslint/explicit-module-boundary-types": "off"
       }
@@ -55,35 +63,31 @@
     "sourceType": "module",
     "project": "./tsconfig.eslint.json"
   },
-  "plugins": ["@typescript-eslint", "prettier"],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
   "root": true,
   "rules": {
-    "@next/next/link-passhref": "error",
+    "@next/next/link-passhref": "off",
     "@next/next/next-script-for-ga": "error",
     "@next/next/no-html-link-for-pages": "error",
     "@next/next/no-img-element": "off",
     "@next/next/no-sync-scripts": "error",
-    "@typescript-eslint/explicit-module-boundary-types": "error",
-    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-var-requires": "off",
     "arrow-body-style": "off",
     "import/no-import-module-exports": [
       "error",
       {
-        "exceptions": ["**/*/store.js"]
+        "exceptions": [
+          "**/*/store.js"
+        ]
       }
     ],
     "import/prefer-default-export": "off",
-    "max-lines": "error",
-    "max-lines-per-function": [
-      "error",
-      {
-        "max": 60,
-        "skipBlankLines": true,
-        "skipComments": true
-      }
-    ],
     "no-alert": "error",
     "no-console": "error",
     "no-plusplus": [
@@ -105,7 +109,10 @@
     "react/jsx-filename-extension": [
       2,
       {
-        "extensions": [".tsx", ".jsx"]
+        "extensions": [
+          ".tsx",
+          ".jsx"
+        ]
       }
     ],
     "react/jsx-no-bind": "off",
@@ -114,11 +121,7 @@
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "react/require-default-props": "off",
-    "react-hooks/exhaustive-deps": "warn"
-  },
-  "settings": {
-    "next": {
-      "rootDir": "services/frontend/"
-    }
+    "react-hooks/exhaustive-deps": "warn",
+    "react/no-unknown-property": "off"
   }
 }

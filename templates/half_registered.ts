@@ -36,20 +36,20 @@ const registration_confirmation = `
 `;
 
 export default async function PartialRegistrationReminder(
-    name: string,
-    link: string,
-    email: string | string[],
+  name: string,
+  link: string,
+  email: string | string[]
 ) {
-    console.log(email);
-    let rendered = ejs.render(registration_confirmation, { name, link });
-    return rendered;
-    let info = await transporter.sendMail({
-        from: '"Dakota Debate Institute Staff" <staff@dakotadebate.org>', // sender address
-        to: email, // list of receivers
-        subject: "Complete your DDI registration, " + name, // Subject line
-        text: "You didn't finish your registration :(", // plain text body
-        html: rendered, // html body
-    });
-    console.log(info);
-    return info;
+  console.log(email);
+  const rendered = ejs.render(registration_confirmation, { name, link });
+  return rendered;
+  const info = await transporter.sendMail({
+    from: '"Dakota Debate Institute Staff" <staff@dakotadebate.org>', // sender address
+    to: email, // list of receivers
+    subject: `Complete your DDI registration, ${name}`, // Subject line
+    text: "You didn't finish your registration :(", // plain text body
+    html: rendered, // html body
+  });
+  console.log(info);
+  return info;
 }

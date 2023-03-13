@@ -1,7 +1,7 @@
-import { Box, Button, Center, List, ListIcon, ListItem, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, List, ListIcon, ListItem, Stack, Text } from "@chakra-ui/react";
 import { CheckIcon, CloseIcon, InfoIcon } from "@chakra-ui/icons";
 
-export type ListItem = {
+export type QuestionListItem = {
   type: "info" | "pro" | "con";
   text: string;
   bold?: boolean;
@@ -11,7 +11,7 @@ export type PricingCardParams = {
   price?: number;
   name?: string;
   recommend?: boolean;
-  details?: ListItem[];
+  details?: QuestionListItem[];
   onClick?: () => void;
 };
 
@@ -31,8 +31,7 @@ export default function PricingCard({ details, price, name, recommend = false, o
       bg={"white"}
       boxShadow={recommend ? "2xl" : "xl"}
       rounded={"md"}
-      overflow={"hidden"}
-    >
+      overflow={"hidden"}>
       <Stack textAlign={"center"} p={padding} color={"gray.800"} align={"center"}>
         <Text
           fontSize={"md"}
@@ -41,8 +40,7 @@ export default function PricingCard({ details, price, name, recommend = false, o
           p={2}
           px={3}
           color={"purple.500"}
-          rounded={"full"}
-        >
+          rounded={"full"}>
           {name}
         </Text>
         <Stack direction={"row"} align={"flex-start"} justify={"center"}>
@@ -52,8 +50,7 @@ export default function PricingCard({ details, price, name, recommend = false, o
           <Text
             fontSize={recommend ? "7xl" : "6xl"}
             fontWeight={800}
-            color={recommend ? "purple.900" : "purple.700"}
-          >
+            color={recommend ? "purple.900" : "purple.700"}>
             {price}
           </Text>
         </Stack>
@@ -70,7 +67,7 @@ export default function PricingCard({ details, price, name, recommend = false, o
             if (detail.type === "info")
               return (
                 <ListItem {...defaultParams}>
-                  <ListIcon as={InfoIcon} color="blue.400" />
+                  <ListIcon as={InfoIcon} color={"blue.400"} />
                   {detail.text}
                 </ListItem>
               );
@@ -78,14 +75,14 @@ export default function PricingCard({ details, price, name, recommend = false, o
             if (detail.type === "pro")
               return (
                 <ListItem {...defaultParams}>
-                  <ListIcon as={CheckIcon} color="green.400" />
+                  <ListIcon as={CheckIcon} color={"green.400"} />
                   {detail.text}
                 </ListItem>
               );
 
             return (
               <ListItem {...defaultParams}>
-                <ListIcon as={CloseIcon} color="red.400" />
+                <ListIcon as={CloseIcon} color={"red.400"} />
                 {detail.text}
               </ListItem>
             );
@@ -97,8 +94,7 @@ export default function PricingCard({ details, price, name, recommend = false, o
           variant={recommend ? "solid" : "outline"}
           mt={10}
           w={"full"}
-          colorScheme={"purple"}
-        >
+          colorScheme={"purple"}>
           Register
         </Button>
       </Box>

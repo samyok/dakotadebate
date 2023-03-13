@@ -2,9 +2,9 @@
  * Copyright (c) 2021 Samyok Nepal.
  */
 import * as ejs from "ejs";
+import phone from "phone";
 import transporter from "./nodemailTransport";
 import { send } from "./plivoTransport";
-import phone from "phone";
 
 const registration_confirmation = `<html lang="en">
 
@@ -44,21 +44,17 @@ Thanks for signing up to DDI! This is our automated text-blast system where you 
 (text STOP to stop)
 `.trim();
 
-export default async function Registration(
-    name: string,
-    email: string | string[],
-    phoneNumber: string,
-) {
-    console.log(email);
-    let rendered = ejs.render(registration_confirmation, { name: name.trim() });
-    let emailInfo = await transporter.sendMail({
-        from: '"Dakota Debate Institute Staff" <staff@dakotadebate.org>', // sender address
-        to: email, // list of receivers
-        subject: "Registration confirmation for " + name, // Subject line
-        text: "Thanks for registering!", // plain text body
-        html: rendered, // html body
-    });
-    let smsInfo = await send(phone(phoneNumber)[0], smsMessage);
-    console.log({ emailInfo, smsInfo });
-    return { emailInfo, smsInfo };
+export default async function Registration(name: string, email: string | string[], phoneNumber: string) {
+  console.log(email);
+  const rendered = ejs.render(registration_confirmation, { name: name.trim() });
+  const emailInfo = await transporter.sendMail({
+    from: '"Dakota Debate Institute Staff" <staff@dakotadebate.org>', // sender address
+    to: email, // list of receivers
+    subject: `Registration confirmation for ${name}`, // Subject line
+    text: "Thanks for registering!", // plain text body
+    html: rendered, // html body
+  });
+  const smsInfo = await send(phone(phoneNumber)[0], smsMessage);
+  console.log({ emailInfo, smsInfo });
+  return { emailInfo, smsInfo };
 }
