@@ -171,7 +171,7 @@ export default function Pricing() {
             src={
               "https://fs3.formsite.com/res/showFormEmbed?EParam=iGs2D6QRb6JHsgFmHBkQspi2nv3jBxRdK5oMHUOxJy8&647515210&EmbedId=647515210"
             }
-            allowpaymentrequest
+            allow={"payment"}
             allowTransparency
           />
         </Box>
