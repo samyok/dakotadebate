@@ -1,6 +1,7 @@
 import "../styles/globals.sass";
 import type { AppProps } from "next/app";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+
 const theme = extendTheme({
   components: {
     Heading: {

@@ -66,7 +66,7 @@ const staffdata = [
     bio: `Hello everyone!
         I graduated from Harrisburg High School this year and will be going to the University of Minnesota in the fall. 
         I am a four-year public forum debater and four-year original orator (National qualifier in PF and 3-time qualifier in oratory!) I was also PF state runner-up this year!
-        Debate has made me become more aware my surroundings which is what I hope to pass onto others. Other than debate, I enjoy singing, dancing, cooking, and painting!`
+        Debate has made me become more aware my surroundings which is what I hope to pass onto others. Other than debate, I enjoy singing, dancing, cooking, and painting!`,
   },
   {
     name: "Srishti Kumari",

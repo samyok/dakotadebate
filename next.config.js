@@ -22,9 +22,10 @@ module.exports = {
       },
       {
         source: "/survey",
-        destination: "https://docs.google.com/forms/d/e/1FAIpQLSeJogNzPSpimlJuSadymjE0kzz-oKOVYrtWEVWXnmH4Hfwe0A/formResponse",
-        permanent: false
-      }
+        destination:
+          "https://docs.google.com/forms/d/e/1FAIpQLSeJogNzPSpimlJuSadymjE0kzz-oKOVYrtWEVWXnmH4Hfwe0A/formResponse",
+        permanent: false,
+      },
     ];
   },
   eslint: {

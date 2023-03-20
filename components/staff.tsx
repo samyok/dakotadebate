@@ -3,12 +3,10 @@
  */
 
 import Image from "next/image";
-import styles from "../styles/staff.module.sass";
 import React, { useState } from "react";
-import BorderedH2 from "./BorderedH2";
+import { chakra } from "@chakra-ui/react";
 import Card from "./Card";
 import staffdata from "./staffdata";
-import { chakra } from "@chakra-ui/react";
 
 export default function OurStaff() {
   const [showAll, setShowAll] = useState(true);
@@ -16,6 +14,7 @@ export default function OurStaff() {
     .filter((_, i) => (showAll ? true : i < 4))
     .map((p, pIndex) => (
       <Card
+        /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
         // @ts-ignore
         id={`person${pIndex}`}
         key={JSON.stringify(p)}
@@ -32,8 +31,7 @@ export default function OurStaff() {
               "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNM4L9QDwAD1gHAp5YglgAAAABJRU5ErkJggg=="
             }
           />
-        }
-      >
+        }>
         {p.bio.split("\n").map((a) => (
           <chakra.p key={a.trim()} mt={6}>
             {a.trim()}
@@ -42,11 +40,11 @@ export default function OurStaff() {
       </Card>
     ));
   return (
-    <div id="people">
-      <div className="cardContainer">{staff}</div>
+    <div id={"people"}>
+      <div className={"cardContainer"}>{staff}</div>
       {!showAll && (
-        <div className="center">
-          <a href="#person2" onClick={() => setShowAll(true)}>
+        <div className={"center"}>
+          <a href={"#person2"} onClick={() => setShowAll(true)}>
             View everyone
           </a>
         </div>
