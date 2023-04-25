@@ -111,9 +111,8 @@ export default function Pricing() {
       send_to: "AW-10862125283/MKItCM-ajK4DEOPBu7so",
       transaction_id: "",
     });
-    window.open(
-      "https://www.sdstate.edu/school-communication-and-journalism/dakota-debate-institute#frame-one647515210"
-    );
+    location.href =
+      "https://www.sdstate.edu/school-communication-and-journalism/dakota-debate-institute#frame-one647515210";
     setIsRegistering(false);
   };
   return (
