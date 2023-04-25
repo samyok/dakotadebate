@@ -114,7 +114,7 @@ export default function Pricing() {
     window.open(
       "https://www.sdstate.edu/school-communication-and-journalism/dakota-debate-institute#frame-one647515210"
     );
-    // setIsRegistering(true);
+    setIsRegistering(false);
   };
   return (
     <Layout py={8}>
