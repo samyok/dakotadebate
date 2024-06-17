@@ -103,13 +103,6 @@ const staffdata = [
         I can’t wait to see where the South Dakota debate community goes! `,
   },
   {
-    name: "Walker Haber",
-    image: "/people/walker.png",
-    bio: `Howdy! I graduated from O’Gorman this year and will be attending the University of Kansas Honors in the fall.
-        Like Lyla, I’m a 2-time state semifinalist in Lincoln-Douglas and a 2-time finalist in International Extemp.
-        At the national tournament, I broke to elimination rounds junior year and was a top 60 speaker senior year. I’m excited to help debaters succeed!`,
-  },
-  {
     name: "Joshua Park",
     image: "/people/Joshua.jpeg",
     bio: `Hey guys! I’m an incoming senior at Brookings High School, and have been involved in debate for 2 years.
